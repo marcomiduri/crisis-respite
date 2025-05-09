@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PROGRESS NOTE | TownHome King's | Crisis Respite</title>
+        <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
+    </head>
+    <body class="view--public">
+        <header>
+            <div class="brand">
+                <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
+            </div>
+        </header>
+        <main>
+            <div class="container--narrow container">
+                <hgroup class="frontend-form-hgroup">
+                    <h3 class="eyebrow">PROGRESS NOTE</h3>
+                    <h1>RESIDENTIAL CRISIS SUPPORT CENTER</h1>
+                </hgroup>
+                <section class="panel--frontend-form panel">
+                    <div class="fieldset">
+                        <div class="form-row--3up form-row">
+                            <div class="form-row-field">
+                                <label for="nameofguest">Name of Guest</label>
+                                <input type="text" id="nameofguest" name="nameofguest" value="Name of Guest" disabled />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="date">Date</label>
+                                <input id="date" type="date" name="date" />
+                            </div>
+                            <div class="form-row-field">
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="individual_yes">
+                                        <input id="individual_yes" type="radio" name="individualcollateral" value="Individual" required="required" />
+                                        Individual
+                                    </label>
+                                    <label class="radio-label" for="group_yes">
+                                        <input id="group_yes" type="radio" name="individualcollateral" value="Group" />
+                                        Group
+                                    </label>
+                                    <label class="radio-label" for="collateral_yes">
+                                        <input id="collateral_yes" type="radio" name="individualcollateral" value="Collateral" />
+                                        Collateral
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row--3up form-row">
+                            <div class="form-row-field">
+                                <label for="staff">Staff</label>
+                                <input type="text" id="staff" name="staff" value="Staff" disabled />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="starttime">Start Time</label>
+                                <input id="starttime" type="time" name="starttime" />
+                            </div>
+                            <div class="form-row-field">
+                            </div>
+                        </div>
+                        <div class="form-row--3up form-row">
+                            <div class="form-row-field">
+                                <label for="costaff">Co-Staff</label>
+                                <input type="text" id="costaff" name="costaff" placeholder="Co-Staff" />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="endtime">End Time</label>
+                                <input id="endtime" type="time" name="endtime" />
+                            </div>
+                            <div class="form-row-field">
+                            </div>
+                        </div>
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="healthandwellnessgoal">Health & Wellness Goal</label>
+                                <input type="text" id="healthandwellnessgoal" name="healthandwellnessgoal" placeholder="Health & Wellness Goal" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fieldset">
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="guestprogress"><b>Describe the guest's progress during stay at respite:</b> (E.G. Reason for obtaining respite services,guest's concern(s); status updates; change in behavioral observations; )</label>
+                                <textarea id="guestprogress" name="guestprogress" cols="170" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="focusofactivity"><b>Focus of Activity:</b> Interventions provided throughout stay (What did you do?), Response to interventions
+                                </label>
+                                <textarea id="focusofactivity" name="focusofactivity" cols="170" rows="5" placeholder="Peer specialist met with [Guest Name] and provided onsite peer support and [list of other services] in order to assist [Guest Name] in reducing challenges and stressors for example: &#10;&#10;This engagement will aid [Guest Name] in their recovery process and help them to avoid going into a further crisis that may increase the risk of hospitalization associated with their documented diagnosis (if available)"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="progressandplan"><b>Progress and Plan:</b> (E.G. coordination of care, referrals, follow-up) INCLUDE <b>Guest's Planned Action and Staff's Planned Action, as appropriate.</b> </label>
+                                <textarea id="progressandplan" name="progressandplan" cols="170" rows="5" placeholder="[Guest Name] made good progress toward [goals stated in Health and Wellness Plan].  [Guest Name] plans to work on [                 ].  Peer staff will continue to assist [Guest Name] in achieving improved stability and assist guests in meeting their goals."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-header">
+                        <div class="panel-header-info">
+                            <h2>Description of Interventions to meet H&W Goal</h2>
+                        </div> 
+                    </div>
+                    <div class="fieldset">
+                        <div class="form-row--2up form-row control-items--inline">
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Onsite peer support during the respite stay" /> Onsite peer support during the respite stay
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Wellness Self-Management" /> Wellness Self-Management
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Conflict resolution" /> Conflict resolution
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Family support/Family and Friends Engagement" /> Family support/Family and Friends Engagement
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Health and wellness coaching" /> Health and wellness coaching
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Strengthening Living Skills" /> Strengthening Living Skills
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Crisis Intervention Plan or WRAP Plan Completed" /> Crisis Intervention Plan or WRAP Plan Completed
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Psychoeducation" /> Psychoeducation
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Health Navigation" /> Health Navigation
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Mutual Self Help" /> Mutual Self Help
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Advocacy" /> Advocacy
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="interventions" value="Psychiatric Advance Directive" /> Psychiatric Advance Directive
+                                </label>
+                            </div>
+                            <div class="form-row--2up form-row control-items--inline">
+                                <div class="form-row-field">
+                                    <label>
+                                        <input type="checkbox" name="interventions" value="Coordinating with primary care, Health Home or other BH providers (on-site or through referrals) to assure collaboration and continuity in managing the crisis situation and identifying subsequent support and service systems" /> Coordinating with primary care, Health Home or other BH providers (on-site or through referrals) to assure collaboration and continuity in managing the crisis situation and identifying subsequent support and service systems
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row--2up form-row control-items--inline">
+                                <div class="form-row-field">
+                                    <label>
+                                        <input type="checkbox" name="interventions" value="Strengthening Coping techniques and mechanisms (i.e. Relaxation techniques to help reduce stress, anxiety, emerging panic or feelings of losing control)" /> Strengthening Coping techniques and mechanisms (i.e. Relaxation techniques to help reduce stress, anxiety, emerging panic or feelings of losing control)
+                                    </label>
+                                    <div class="control-items--inline control-items">
+                                        <label>
+                                            <input type="checkbox" name="interventions" value="Other" /> Other:
+                                        </label>
+                                        <div class="field-inline">
+                                            <input type="text" name="interventionsother"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row--submit">
+                        <input type="submit" value="Discharge Guest" onclick="submitForm();" />
+                        <button class="button--secondary">Cancel</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
+
+    
+    
+      

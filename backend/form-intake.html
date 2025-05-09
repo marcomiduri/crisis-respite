@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intake Progress Note | TownHome King's | Crisis Respite</title>
+        <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
+    </head>
+    <body class="view--public">
+        <header>
+            <div class="brand">
+                <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
+            </div>
+        </header>
+        <main>
+            <div class="container--narrow container">
+                <hgroup class="frontend-form-hgroup">
+                    <h3 class="eyebrow">Intake Progress Note</h3>
+                    <h1>TownHome Health King</h1>
+                </hgroup>
+                <section class="panel--frontend-form panel">
+                    <div class="fieldset">
+                        <div class="form-row--3up form-row">
+                            <div class="form-row-field">
+                                <label for="nameofguest">Name of Guest</label>
+                                <input type="text" id="nameofguest" name="nameofguest" value="Name of Guest" disabled />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="date">Date</label>
+                                <input id="date" type="date" name="date" />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="individual">Are you an individual? <span>*</span></label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="individual_yes">
+                                        <input id="individual_yes" type="radio" name="individual" value="yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="individual_no">
+                                        <input id="individual_no" type="radio" name="individual" value="no" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row--3up form-row">
+                            <div class="form-row-field">
+                                <label for="staff">Staff</label>
+                                <input type="text" id="staff" name="staff" value="Staff" disabled />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="costaff">Co-Staff</label>
+                                <input type="text" id="costaff" name="costaff" placeholder="Co-Staff" />
+                            </div>
+                            <div class="form-row-field">
+                                <label for="shift">Shift</label>
+                                <input type="text" id="shift" name="shift" placeholder="Shift" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fieldset">
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="guestprogress"><b>Describe the guest's progress during stay at respite:</b> (E.G. Crisis/Reason for obtaining respite, what guests
+                                    hope to gain from respite stay etc.)</label>
+                                <textarea id="guestprogress" name="guestprogress" cols="170" rows="5" placeholder="[Guest Name] came to the respite because &#10;&#10;[Guest Name] hopes to "></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="focusofactivity"><b>Focus of Activity:</b> (Interventions provided during intake, interventions that guests could benefit from?)
+                                </label>
+                                <textarea id="focusofactivity" name="focusofactivity" cols="170" rows="5" placeholder="Peer specialist met with [Guest Name] and provided onsite peer support, [choose from services on page 2]. Peer specialist also recommends that guest work on [choose from services on page 2] in order to assist [Guest Name] in reducing challenges and stressors [such as...]. This will aid [Guest Name] in their recovery process and help them to avoid going into further crisis that may increase the risk of hospitalization associated with their documented [documented diagnosis]."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label for="progressandplan"><b>Progress and Plan:</b> (E.G. coordination of care, referrals, follow-up) INCLUDE <b>Guest's Planned Action and Staff's Planned Action, as appropriate.</b> </label>
+                                <textarea id="progressandplan" name="progressandplan" cols="170" rows="5" placeholder="[Guest Name] plans to continue attending [follow up appointment ]. [Guest Name] agreed to complete and activate their health and wellness plan on [agreed upon date]. While at respite [Guest Name] would like to work on [ see list on page 2/ list goals] . Peer staff will actively work with [Guest Name] to achieve improved stability and assist the guest in meeting their goals."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-header">
+                        <div class="panel-header-info">
+                            <h2>Resource and Referral Recommendations: (check all that apply)</h2>
+                        </div> 
+                    </div>
+                    <div class="fieldset">
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label id="lang" for="safetyanddv">Safety & DV:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="safetyanddv" value="Crisis Safety Plan" /> Crisis Safety Plan
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="safetyanddv" value="Domestic Violence Safety Plan" />Domestic Violence Safety Plan
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="safetyanddv" value="APS" />APS
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="safetyanddv" value="Safe Horizon" />Safe Horizon
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="safetyanddv" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="safetyanddvother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="housing">Housing:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="housing" value="Health Home/Medicaid" /> Health Home/Medicaid
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="housing" value="Center for Urban Community Services" />Center for Urban Community Services
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="housing" value=" Living Room/Safe Haven" /> Living Room/Safe Haven
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="housing" value="Housing Works" />Housing Works
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="housing" value="Prevention Assistance and Temporary Housing (PATH)" />Prevention Assistance and Temporary Housing (PATH)
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="housing" value="NYCHA" />NYCHA
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="housing" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="housingother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="employment">Employment:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="employment" value="Bronx Employment Support & Training" /> Bronx Employment Support & Training
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="employment" value="NYS Education Department: ACCESS-VR Bronx" />NYS Education Department: ACCESS-VR Bronx
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="employment" value="STRIVE" />STRIVE
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="employment" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="employmentother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="education">Education:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="education" value="GED Program" /> GED Program
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="education" value="College" />College
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="education" value="Financial Aid Resources" />Financial Aid Resources
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="education" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="educationother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="benefits">Benefits:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="benefits" value="SNAP" /> SNAP
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="benefits" value="SSI" />SSI
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="benefits" value="SSD" />SSD
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="benefits" value=" Unemployment (DOL)" /> Unemployment (DOL)
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="benefits" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="benefitsother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="medicalcare">Medical Care:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="medicalcare" value="Referral for Primary Care Physician" /> Referral for Primary Care Physician
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="medicalcare" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="medicalcareother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="physicalhealth">Physical Health:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="physicalhealth" value="Nutrition" /> Nutrition
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="physicalhealth" value="Exercise Routine " />Exercise Routine 
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="physicalhealth" value=" Gym membership" /> Gym membership
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="physicalhealth" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="physicalhealthother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="mentalhealth">Mental Health:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="mentalhealth" value="Kings County OP Clinic" /> Kings County OP Clinic
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="mentalhealth" value=" Visiting Nurse Service NA-MCT" /> Visiting Nurse Service NA-MCT
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="mentalhealth" value=" Gym membership" /> Gym membership
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="mentalhealth" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="mentalhealthother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="supportgroups">Support Groups:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="AA" /> AA
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="NA" />NA
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="Hearing Voices Network" />Hearing Voices Network
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="Bereavement" />Bereavement
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="Domestic Violence" />Domestic Violence
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="PTSD" />PTSD
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="Caregivers (NAMI)" />Caregivers (NAMI)
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="supportgroups" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="supportgroupsother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="socialdevelopment">Social Development:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Geel Clubhouse" /> Geel Clubhouse
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="friendshipnetwork.org ☐" />friendshipnetwork.org ☐
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="nolongerlonely.com" />nolongerlonely.com
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="socialdevelopmentother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="socialdevelopment">Self-Care:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Stress Mgt" /> Stress Mgt
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Coping Skills" />Coping Skills
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Anxiety Mgt" />Anxiety Mgt
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Self Esteem" />Self Esteem
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="socialdevelopment" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="socialdevelopmentother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="legal">Legal:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Mental Health Law Project (MFY)" /> Mental Health Law Project (MFY)
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Legal Resource Service (NAMI)" />Legal Resource Service (NAMI)
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Urban Justice Cente" />Urban Justice Cente
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="legalother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="independantlivingskills">Independent Living Skills:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="independantlivingskills" value="Home Health Aide" /> Home Health Aide
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="independantlivingskills" value="Cooking Assistance" />Cooking Assistance
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="independantlivingskills" value="Travel training" />Travel training
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="independantlivingskills" value="Money Management" />Money Management
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="independantlivingskills" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="independantlivingskillsother"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label id="lang" for="legal">LGBTQ:</label>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="legal" value="NYC Anti-Violence Project" /> NYC Anti-Violence Project
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="legal" value=" LGBT Community Center" /> LGBT Community Center
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="legalother"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-header">
+                        <div class="panel-header-info">
+                            <h2>Description of Interventions to meet H&W Goal</h2>
+                        </div> 
+                    </div>
+                    <div class="fieldset">
+                        <div class="form-row--2up form-row control-items--inline">
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Onsite peer support during the respite stay" /> Onsite peer support during the respite stay
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Wellness Self-Management" /> Wellness Self-Management
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Psychoeducation" /> Psychoeducation
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Conflict resolution" /> Conflict resolution
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Health Navigation" /> Health Navigation
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Family support/Family and Friends Engagement" /> Family support/Family and Friends Engagement
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Mutual Self Help" /> Mutual Self Help
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Health and wellness coaching" /> Health and wellness coaching
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Advocacy" /> Advocacy
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Strengthening Living Skills" /> Strengthening Living Skills
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Psychiatric Advance Directive" /> Psychiatric Advance Directive
+                                </label>
+                            </div>
+                            <div class="form-row-field">
+                                <label>
+                                    <input type="checkbox" name="legal" value="Crisis Intervention Plan or WRAP Plan Completed" /> Crisis Intervention Plan or WRAP Plan Completed
+                                </label>
+                            </div>
+                            <div class="form-row--2up form-row control-items--inline">
+                                <div class="form-row-field">
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Coordinating with primary care, Health Home or other BH providers (on-site or through referrals) to assure collaboration and continuity in managing the crisis situation and identifying subsequent support and service systems" /> Coordinating with primary care, Health Home or other BH providers (on-site or through referrals) to assure collaboration and continuity in managing the crisis situation and identifying subsequent support and service systems
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row--2up form-row control-items--inline">
+                                <div class="form-row-field">
+                                    <label>
+                                        <input type="checkbox" name="legal" value="Strengthening Coping techniques and mechanisms (i.e. Relaxation techniques to help reduce stress, anxiety, emerging panic or feelings of losing control)" /> Strengthening Coping techniques and mechanisms (i.e. Relaxation techniques to help reduce stress, anxiety, emerging panic or feelings of losing control)
+                                    </label>
+                                    <div class="control-items--inline control-items">
+                                        <label>
+                                            <input type="checkbox" name="legal" value="Other" /> Other:
+                                        </label>
+                                        <div class="field-inline">
+                                            <input type="text" name="legalother"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-header">
+                        <div class="panel-header-info">
+                            <h2>Any Immediate or Planned Needs Met:</h2>
+                        </div> 
+                    </div>
+                    <div class="fieldset">
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="immediateorplannedneedsmet" value="Clothing" /> Clothing
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="immediateorplannedneedsmet" value="Medical" />Medical
+                                    </label>
+                                </div>
+                                <div class="control-items--inline control-items">
+                                    <label>
+                                        <input type="checkbox" name="immediateorplannedneedsmet" value="Other" /> Other:
+                                    </label>
+                                    <div class="field-inline">
+                                        <input type="text" name="immediateorplannedneedsmetother"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row--submit">
+                        <input type="submit" value="Admit Guest" onclick="submitForm();" />
+                        <button class="button--secondary">Cancel</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
+
+    
+    
+      
