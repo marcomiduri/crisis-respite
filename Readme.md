@@ -8,7 +8,7 @@ This repository contains html/css templates for forms required for the website.
 
 ## Directories
 
-- `/backend` : HTML/CSS templates
+- `/backend` : HTML templates
 - `/static`: css styles and images
 - `/pdfs`: PDF files for new templates
 
