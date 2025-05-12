@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PROGRESS NOTE | TownHome King's | Crisis Respite</title>
+        <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
+    </head>
+    <body class="view--public">
+        <header>
+            <div class="brand">
+                <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
+            </div>
+        </header>
+        <main>
+            <div class="container--narrow container">
+                <hgroup class="frontend-form-hgroup">
+                    <h3 class="eyebrow">James Wilson</h3>
+                    <h1>Pre-Registration</h1>
+                </hgroup>
+                <section class="panel--frontend-form panel">
+                    <div class="fieldset">
+                        <div class="form-row--full form-row">
+                            <div class="form-row-field">
+                                <label>1. Are you over the age of 18?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="ageof18_yes">
+                                        <input id="ageof18_yes" type="radio" name="ageof18" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="ageof18_no">
+                                        <input id="ageof18_no" type="radio" name="ageof18" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>2. Do you have photo identification and copies of your insurance cards?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="hasphotoorinsurancecard_yes">
+                                        <input id="hasphotoorinsurancecard_yes" type="radio" name="hasphotoorinsurancecard" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="hasphotoorinsurancecard_no">
+                                        <input id="hasphotoorinsurancecard_no" type="radio" name="hasphotoorinsurancecard" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>3. Do you have any medical alerts that we should be aware of i.e. Active asthma, allergies, epilepsy etc.?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="medicalalerts_yes">
+                                        <input id="medicalalerts_yes" type="radio" name="medicalalerts" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="medicalalerts_no">
+                                        <input id="medicalalerts_no" type="radio" name="medicalalerts" value="No" />
+                                        No
+                                    </label>
+                                    <label for="medicalalerts_conditions">
+                                        Conditions:
+                                        <input type="text" id="medicalalerts_conditions" name="medicalalerts_conditions" value="" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>4. Do you have a Medical Doctor (PCP) that handles your medical needs?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="medicaldoctor_yes">
+                                        <input id="medicaldoctor_yes" type="radio" name="medicaldoctor" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="medicaldoctor_no">
+                                        <input id="medicaldoctor_no" type="radio" name="medicaldoctor" value="No" />
+                                        No
+                                    </label>
+                                    <label for="medicaldoctor_whowhere">
+                                        Who/Where:
+                                        <input type="text" id="medicaldoctor_whowhere" name="medicaldoctor_whowhere" value="" />
+                                    </label>
+                                </div>
+                                <label> If you do not have a PCP, and a medical issue or concern is presented during your stay, would you be in agreement to seek medical attention at an Urgent Care and/or Emergency room if necessary?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="medicaldoctor_extra_yes">
+                                        <input id="medicaldoctor_extra_yes" type="radio" name="medicaldoctor_extra" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="medicaldoctor_extra_no">
+                                        <input id="medicaldoctor_extra_no" type="radio" name="medicaldoctor_extra" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>5. Is anyone telling you you have to come to the respite or is the interest to come to a Crisis Respite Center voluntarily coming from you?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="voluntarily_yes">
+                                        <input id="voluntarily_yes" type="checkbox" name="voluntarily" required="required" />
+                                        Voluntary
+                                    </label>
+                                    <label for="voluntarily_extra">
+                                        External Recommendation by:
+                                        <input class="width-unset" type="text" id="voluntarily_extra" name="voluntarily_extra" value="" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label for="phonenumber">6. What is the best phone number where you can be reached?</label>
+                                <input type="text" id="phonenumber" name="phonenumber" value="" />
+                            </div>
+                            <div class="form-row-field">
+                                <label>7. Have you ever been to one of the crisis respites in NYC?  If yes, how many days have you spent at a Short-Term Crisis Respite Center this year?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="crisisrespites_presences_yes">
+                                        <input id="crisisrespites_presences_yes" type="radio" name="crisisrespites_presences" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label for="crisisrespites_presences_days">
+                                        Days:
+                                        <input class="width-100" type="number" id="crisisrespites_presences_days" name="crisisrespites_presences_days" value="" />
+                                    </label>
+                                    <label class="radio-label" for="crisisrespites_presences_no">
+                                        <input id="crisisrespites_presences_no" type="radio" name="crisisrespites_presences" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>8. The crisis respite is here to assist you with an emotional or psychiatric crisis that you otherwise would not be able to handle on your own or where you live.   Are you interested in coming to the respite for support, including talking to someone daily about your crisis?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="crisisrespites_interest_yes">
+                                        <input id="crisisrespites_interest_yes" type="radio" name="crisisrespites_interest" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="crisisrespites_interest_no">
+                                        <input id="crisisrespites_interest_no" type="radio" name="crisisrespites_interest" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                                <div class="subfield-group">
+                                    <label for="crisisrespites_interest_yes_lead">a. <b>(IF YES)</b> Can you briefly explain the crisis which is leading you to seek respite services?</label>
+                                    <textarea id="crisisrespites_interest_yes_lead" name="crisisrespites_interest_yes_lead" cols="170" rows="5" placeholder=""></textarea>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>b. <b>(IF NO)</b> 
+                                        A Crisis Respite is for people needing daily support from peer specialists to 
+                                        resolve the crisis.  Peer support, along with a kind, clean homelike environment help 
+                                        people get on the road to recovery from their crisis.  If you are not experiencing such a 
+                                        crisis, or do not want daily peer support and services, our respite will not be a good fit for 
+                                        you right now.   We are always a call away if you need this type of support in the 
+                                        future.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>9. Are you aware that our Residential Crisis Support Center is short term (from 1-28 days)?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="shorterm_awareness_yes">
+                                        <input id="shorterm_awareness_yes" type="radio" name="shorterm_awareness" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="shorterm_awareness_no">
+                                        <input id="shorterm_awareness_no" type="radio" name="shorterm_awareness" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                                <label>Because this is a temporary stay based on your medical needs,  you will be expected to provide us with an address where  you will return or go upon discharge.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row--submit">
+                        <input type="submit" value="Admit" onclick="submitForm();" />
+                        <input type="submit" value="Save & Exit" onclick="submitForm();" />
+                        <button class="button--secondary">Cancel</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
+
+    
+    
+      
