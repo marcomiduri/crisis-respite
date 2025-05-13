@@ -80,7 +80,7 @@
                                         <input type="text" id="medicaldoctor_whowhere" name="medicaldoctor_whowhere" value="" />
                                     </label>
                                 </div>
-                                <label> If you do not have a PCP, and a medical issue or concern is presented during your stay, would you be in agreement to seek medical attention at an Urgent Care and/or Emergency room if necessary?</label>
+                                <p> If you do not have a PCP, and a medical issue or concern is presented during your stay, would you be in agreement to seek medical attention at an Urgent Care and/or Emergency room if necessary?</p>
                                 <div class="control-items--inline control-items">
                                     <label class="radio-label" for="medicaldoctor_extra_yes">
                                         <input id="medicaldoctor_extra_yes" type="radio" name="medicaldoctor_extra" value="Yes" required="required" />
@@ -165,7 +165,378 @@
                                         No
                                     </label>
                                 </div>
-                                <label>Because this is a temporary stay based on your medical needs,  you will be expected to provide us with an address where  you will return or go upon discharge.</label>
+                                <p>Because this is a temporary stay based on your medical needs,  you will be expected to provide us with an address where  you will return or go upon discharge.</p>
+                            </div>
+                            <div class="form-row-field">
+                                <label>10. Where are you currently living?</label>
+                                
+                                <div class="subfield-group">
+                                    <label>a. Can you return there after your stay with us?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="returnafterstaywithus_yes">
+                                            <input id="returnafterstaywithus_yes" type="radio" name="returnafterstaywithus" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="returnafterstaywithus_no">
+                                            <input id="returnafterstaywithus_no" type="radio" name="returnafterstaywithus" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>b. If not, why?</label>
+                                    <textarea name="noreturn_reason" cols="170" rows="5" placeholder=""></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>11. Have you ever received a diagnosis from a mental health professional?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="mentalhealth_diagonosed_yes">
+                                        <input id="mentalhealth_diagonosed_yes" type="radio" name="mentalhealth_diagonosed" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="mentalhealth_diagonosed_no">
+                                        <input id="mentalhealth_diagonosed_no" type="radio" name="mentalhealth_diagonosed" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                                <p>What are the diagnoses:</p>
+                                <textarea name="mentalhealth_diagonoses" cols="170" rows="5" placeholder=""></textarea>
+                            </div>
+                            <div class="form-row-field">
+                                <label>12. In the last 90 days, have you experienced any thoughts of wanting to harm yourself?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="anywanting_harm_yourself_yes">
+                                        <input id="anywanting_harm_yourself_yes" type="radio" name="anywanting_harm_yourself" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="anywanting_harm_yourself_no">
+                                        <input id="anywanting_harm_yourself_no" type="radio" name="anywanting_harm_yourself" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                                <p>If yes, have you completed a safety plan/contract for safety with your providers?</p>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="anywanting_harm_yourself_yes_safety_plan_yes">
+                                        <input id="anywanting_harm_yourself_yes_safety_plan_yes" type="radio" name="anywanting_harm_yourself_yes_safety_plan" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="anywanting_harm_yourself_yes_safety_plan_no">
+                                        <input id="anywanting_harm_yourself_yes_safety_plan_no" type="radio" name="anywanting_harm_yourself_yes_safety_plan" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>13. In the last 90 days, have you experienced any thoughts of wanting to harm someone else?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="anywanting_harm_someone_yes">
+                                        <input id="anywanting_harm_someone_yes" type="radio" name="anywanting_harm_someone" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="anywanting_harm_someone_no">
+                                        <input id="anywanting_harm_someone_no" type="radio" name="anywanting_harm_someone" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>14. In the last 90 days, have you experienced a recent assault (sexual, domestic, etc.?)</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="recent_experienced_assualt_yes">
+                                        <input id="recent_experienced_assualt_yes" type="radio" name="recent_experienced_assualt" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="recent_experienced_assualt_no">
+                                        <input id="recent_experienced_assualt_no" type="radio" name="recent_experienced_assualt" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>15. In the last 90 days, have you experienced or engaged in violence?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="violence_experienced_yes">
+                                        <input id="violence_experienced_yes" type="radio" name="violence_experienced" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="violence_experienced_no">
+                                        <input id="violence_experienced_no" type="radio" name="violence_experienced" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                                <p>If yes, please provide us with more information about the situation:</p>
+                                <textarea name="violence_experienced_yes_lead" cols="170" rows="5" placeholder=""></textarea>
+                            </div>
+                            <div class="form-row-field">
+                                <label>16. Are you on medication?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="on_medication_yes">
+                                        <input id="on_medication_yes" type="radio" name="on_medication" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="on_medication_no">
+                                        <input id="on_medication_no" type="radio" name="on_medication" value="No" />
+                                        No
+                                    </label>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>a. Can we go over your medication list with you as soon as you arrive at Townhome Kings?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="tk_check_medication_list_yes">
+                                            <input id="tk_check_medication_list_yes" type="radio" name="tk_check_medication_list" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="tk_check_medication_list_no">
+                                            <input id="tk_check_medication_list_no" type="radio" name="tk_check_medication_list" value="No" />
+                                            No
+                                        </label>
+                                        <label class="radio-label" for="tk_check_medication_list_na">
+                                            <input id="tk_check_medication_list_na" type="radio" name="tk_check_medication_list" value="N/A" />
+                                            N/A
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>b. At Townhome Kings we offer medication management support which will help you keep 
+your medication organized and ensure that you are taking it as prescribed. We feel this 
+is the best approach and a great support to your wellness. Would you agree to medication 
+management support or would you rather manage your medications by yourself?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="medication_management_support_yes">
+                                            <input id="medication_management_support_yes" type="radio" name="medication_management_support" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="medication_management_support_no">
+                                            <input id="medication_management_support_no" type="radio" name="medication_management_support" value="No" />
+                                            No
+                                        </label>
+                                        <label class="radio-label" for="medication_management_support_na">
+                                            <input id="medication_management_support_na" type="radio" name="medication_management_support" value="N/A" />
+                                            N/A
+                                        </label>
+                                    </div>
+                                    <p><b>Controlled substances are checked in for security and safety.  We also encourage anyone on 
+medications for the first time to take advantage of this support.  This way you will learn the 
+best way to stay medication adherent and have success with it.</b></p>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>c. Do you have at least 30 days of medication (or prescription refills)?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="30daymedication_yes">
+                                            <input id="30daymedication_yes" type="radio" name="30daymedication" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="30daymedication_no">
+                                            <input id="30daymedication_no" type="radio" name="30daymedication" value="No" />
+                                            No
+                                        </label>
+                                        <label class="radio-label" for="30daymedication_na">
+                                            <input id="30daymedication_na" type="radio" name="30daymedication" value="N/A" />
+                                            N/A
+                                        </label>
+                                    </div>
+                                    <p><b>If not, you must discuss with your referral source, prescriber and other resources in order 
+to secure 30 days of medication so that you  have enough for your full stay at THH.</b></p>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>17. Have you recently struggled with any substance/alcohol use or have a substance use diagnosis?</label>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="recent_struggles_yes">
+                                        <input id="recent_struggles_yes" type="radio" name="recent_struggles" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="recent_struggles_no">
+                                        <input id="recent_struggles_no" type="radio" name="recent_struggles" value="No" />
+                                        No
+                                    </label>
+                                    <label class="radio-label" for="recent_struggles_na">
+                                        <input id="recent_struggles_na" type="radio" name="recent_struggles" value="N/A" />
+                                        N/A
+                                    </label>
+                                </div>
+                                <p>
+                                     If yes, would you be willing to work with peer specialists to connect with services or live at THH drug and alcohol free?
+                                </p>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="willing_to_work_with_specialists_yes">
+                                        <input id="willing_to_work_with_specialists_yes" type="radio" name="willing_to_work_with_specialists" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="willing_to_work_with_specialists_no">
+                                        <input id="willing_to_work_with_specialists_no" type="radio" name="willing_to_work_with_specialists" value="No" />
+                                        No
+                                    </label>
+                                    <label class="radio-label" for="willing_to_work_with_specialists_na">
+                                        <input id="willing_to_work_with_specialists_na" type="radio" name="willing_to_work_with_specialists" value="N/A" />
+                                        N/A
+                                    </label>
+                                </div>
+                                <p>
+                                    If you have any doubts about wanting to receive this support we need you to be aware that our 
+policies prohibit the <b>use</b> and <b>presence</b> of drugs and alcohol on the premises.  If  you were to 
+arrive intoxicated with any substance and peer staff assess that you will be putting your life and 
+the lives of other guests at risk or create a disturbance, we would send for help to deal with the 
+situation and also administratively discharge you from the Crisis Respite.  In addition any 
+smoking or vaping in areas other than those designated for tobacco smoking will result in 
+discharge.  We also prohibit having any type of drug, legal or illegal in your possession and in 
+your room.  During weekly room inspections, any drugs found in your room or any odor 
+indicating as much will result in a discharge.  Please understand that we have guests and staff 
+that are very committed to their recovery.  These policies are meant to protect them.  
+Would you have any difficulty with following our healthy and drug free living  policies? 
+                                </p>
+                                <div class="control-items--inline control-items">
+                                    <label class="radio-label" for="challenges_yes">
+                                        <input id="challenges_yes" type="radio" name="challenges" value="Yes" required="required" />
+                                        Yes
+                                    </label>
+                                    <label class="radio-label" for="challenges_no">
+                                        <input id="challenges_no" type="radio" name="challenges" value="No" />
+                                        No
+                                    </label>
+                                    <label class="radio-label" for="challenges_na">
+                                        <input id="challenges_na" type="radio" name="challenges" value="N/A" />
+                                        N/A
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row-field">
+                                <label>18. Since our program focuses on supporting individuals through an emotional and/or psychiatric 
+crisis, we have some expectations that must be met by all of our guests. If you are accepted for a 
+stay at our respite, you will be expected to participate in the following activities:</label>
+                                <div class="subfield-group">
+                                    <label>a. <b>UPON ARRIVAL</b> - Sitting down with a staff member to complete our intake paperwork 
+when you first get here. The staff member will go over the house rules and you will be 
+asked to sign some forms. Are you  willing to do this?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="willing_to_do_this_yes">
+                                            <input id="willing_to_do_this_yes" type="radio" name="willing_to_do_this" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="willing_to_do_this_no">
+                                            <input id="willing_to_do_this_no" type="radio" name="willing_to_do_this" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>b. <b>UPON COMPLETING THE INTAKE</b> -  you will be asked to complete a health and 
+wellness plan which you will return to us within the first 24 hours of your stay. This 
+document is the roadmap for your recovery while you are at THH.  You will be reflecting 
+on and telling us about your coping skills, your goals, and other things related to helping 
+you move past your crisis. <br/>
+<b>Are you willing to complete a health and wellness plan and hand it in to staff in a 
+timely manner?</b></label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="willing_to_complete_plan_yes">
+                                            <input id="willing_to_complete_plan_yes" type="radio" name="willing_to_complete_plan" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="willing_to_complete_plan_no">
+                                            <input id="willing_to_complete_plan_no" type="radio" name="willing_to_complete_plan" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>c. <b>DURING YOUR ENTIRE STAY</b> -  you will be expected to touch base and check in 
+with a staff member at least once a day. There is also a sign-out procedure by which you 
+will have to tell us where you are going and provide an address.  We will not be checking 
+on you but we need to demonstrate we are attending to your whereabouts since you are in 
+crisis.
+                                    </label>
+                                    <p> Are you willing to meet with a staff member at least once a day? </p>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="willing_to_meet_staff_yes">
+                                            <input id="willing_to_meet_staff_yes" type="radio" name="willing_to_meet_staff" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="willing_to_meet_staff_no">
+                                            <input id="willing_to_meet_staff_no" type="radio" name="willing_to_meet_staff" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                    <p> Are you willing to follow THH’s sign out procedure and tell us your whereabouts?</p>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="willing_to_follow_signout_yes">
+                                            <input id="willing_to_follow_signout_yes" type="radio" name="willing_to_follow_signout" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="willing_to_follow_signout_no">
+                                            <input id="willing_to_follow_signout_no" type="radio" name="willing_to_follow_signout" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>d. <b>DURING YOUR STAY</b> -  if anything happens that requires your attention and you need 
+to be away from the crisis respite, you need to discuss this immediately with a peer 
+specialist or the program director.  You could receive the okay to stay away from the 
+Crisis Respite for more than 24 hours.<br/><br/>
+ Would you agree to not stay out overnight or be away for more than 24hrs without 
+discussing your situation with a peer specialist and\or the program director? </label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="willing_to_agree_yes">
+                                            <input id="willing_to_agree_yes" type="radio" name="willing_to_agree" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="willing_to_agree_no">
+                                            <input id="willing_to_agree_no" type="radio" name="willing_to_agree" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>e. <b>DURING YOUR ENTIRE STAY</b> -   you will find THH’s kitchen to have food items for 
+you to prepare breakfast and lunch.  Our staff is happy to cook and serve dinner for all 
+guests.  Our kitchen is open most of the day but closes during quiet hours 
+(10:30pm-6:30am), <b>even if you are storing food items in our refrigerator or 
+cabinets.</b><br/>
+Are you able to prepare your own meals without assistance?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="able_to_prepare_meals_yes">
+                                            <input id="able_to_prepare_meals_yes" type="radio" name="able_to_prepare_meals" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="able_to_prepare_meals_no">
+                                            <input id="able_to_prepare_meals_no" type="radio" name="able_to_prepare_meals" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>f. <b>DURING YOUR ENTIRE STAY</b> -  you will be required to perform activities of daily 
+living like keeping your room orderly, cleaning up after yourself when you prepare breakfast and 
+lunch and keeping up your personal hygiene.<br/> Are you able to perform Activities of Daily Living (ADLs) independently?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="able_to_perform_ADLs_yes">
+                                            <input id="able_to_perform_ADLs_yes" type="radio" name="able_to_perform_ADLs" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="able_to_perform_ADLs_no">
+                                            <input id="able_to_perform_ADLs_no" type="radio" name="able_to_perform_ADLs" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="subfield-group">
+                                    <label>g. <b>DURING YOUR ENTIRE STAY</b> - you will be sharing common areas including 
+washing and drying machines, kitchen, dining areas, community room (which includes 
+television and gaming consoles) and smoking areas.
+<br/><br/> 
+Would the sharing of these spaces be an issue for you?</label>
+                                    <div class="control-items--inline control-items">
+                                        <label class="radio-label" for="sharing_spaces_issue_yes">
+                                            <input id="sharing_spaces_issue_yes" type="radio" name="sharing_spaces_issue" value="Yes" required="required" />
+                                            Yes
+                                        </label>
+                                        <label class="radio-label" for="sharing_spaces_issue_no">
+                                            <input id="sharing_spaces_issue_no" type="radio" name="sharing_spaces_issue" value="No" />
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
