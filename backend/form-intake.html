@@ -1,555 +1,1280 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Intake Progress Note | TownHome King's | Crisis Respite</title>
-        <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
-    </head>
-    <body class="view--public">
-        <header>
-            <div class="brand">
-                <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Intake Progress Note | TownHome King's | Crisis Respite</title>
+      <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
+      <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
+   </head>
+   <body class="view--public">
+      <header>
+         <div class="brand">
+            <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
+         </div>
+      </header>
+      <main>
+         <div class="container--narrow container">
+         <!-- Face Sheet  -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+                  <div class="field">
+                     <div class="form-row--full form-row">
+                        <div class="form-row-field">
+                           <label>Billing Department</label>
+                           <div class="control-items--inline control-items">
+                              <label>
+                              <input type="checkbox" name="billingdepartment" value="Medicaid"> Medicaid
+                              </label>
+                              <label>
+                              <input type="checkbox" name="billingdepartment" value="Medicare">Medicare
+                              </label>
+                              <label>
+                              <input type="checkbox" name="billingdepartment"
+                                 value="Dual Eligibility ">Dual
+                              Eligibility
+                              </label>
+                              <label>
+                              <input type="checkbox" name="billingdepartment" value="Uninsured">Uninsured
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-row--3up form-row">
+                        <div class="form-row-field">
+                           <label for="insurance">Insurance#</label>
+                           <input type="text" id="insurance" name="insurance" placeholder="Insurance#">
+                        </div>
+                     </div>
+                     <div class="form-row--3up form-row">
+                        <div class="form-row-field">
+                           <label for="mco">MCO</label>
+                           <input type="text" id="mco" name="mco" placeholder="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </header>
-        <main>
-            <div class="container--narrow container">
-                <hgroup class="frontend-form-hgroup">
-                    <h3 class="eyebrow">Intake Progress Note</h3>
-                    <h1>TownHome Health King</h1>
-                </hgroup>
-                <section class="panel--frontend-form panel">
-                    <div class="fieldset">
-                        <div class="form-row--3up form-row">
-                            <div class="form-row-field">
-                                <label for="nameofguest">Name of Guest</label>
-                                <input type="text" id="nameofguest" name="nameofguest" value="Name of Guest" disabled />
-                            </div>
-                            <div class="form-row-field">
-                                <label for="date">Date</label>
-                                <input id="date" type="date" name="date" />
-                            </div>
-                            <div class="form-row-field">
-                                <label for="individual">Are you an individual? <span>*</span></label>
-                                <div class="control-items--inline control-items">
-                                    <label class="radio-label" for="individual_yes">
-                                        <input id="individual_yes" type="radio" name="individual" value="yes" required="required" />
-                                        Yes
-                                    </label>
-                                    <label class="radio-label" for="individual_no">
-                                        <input id="individual_no" type="radio" name="individual" value="no" />
-                                        No
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row--3up form-row">
-                            <div class="form-row-field">
-                                <label for="staff">Staff</label>
-                                <input type="text" id="staff" name="staff" value="Staff" disabled />
-                            </div>
-                            <div class="form-row-field">
-                                <label for="costaff">Co-Staff</label>
-                                <input type="text" id="costaff" name="costaff" placeholder="Co-Staff" />
-                            </div>
-                            <div class="form-row-field">
-                                <label for="shift">Shift</label>
-                                <input type="text" id="shift" name="shift" placeholder="Shift" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fieldset">
-                        <div class="form-row--full form-row">
-                            <div class="form-row-field">
-                                <label for="guestprogress"><b>Describe the guest's progress during stay at respite:</b> (E.G. Crisis/Reason for obtaining respite, what guests
-                                    hope to gain from respite stay etc.)</label>
-                                <textarea id="guestprogress" name="guestprogress" cols="170" rows="5" placeholder="[Guest Name] came to the respite because &#10;&#10;[Guest Name] hopes to "></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row--full form-row">
-                            <div class="form-row-field">
-                                <label for="focusofactivity"><b>Focus of Activity:</b> (Interventions provided during intake, interventions that guests could benefit from?)
-                                </label>
-                                <textarea id="focusofactivity" name="focusofactivity" cols="170" rows="5" placeholder="Peer specialist met with [Guest Name] and provided onsite peer support, [choose from services on page 2]. Peer specialist also recommends that guest work on [choose from services on page 2] in order to assist [Guest Name] in reducing challenges and stressors [such as...]. This will aid [Guest Name] in their recovery process and help them to avoid going into further crisis that may increase the risk of hospitalization associated with their documented [documented diagnosis]."></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row--full form-row">
-                            <div class="form-row-field">
-                                <label for="progressandplan"><b>Progress and Plan:</b> (E.G. coordination of care, referrals, follow-up) INCLUDE <b>Guest's Planned Action and Staff's Planned Action, as appropriate.</b> </label>
-                                <textarea id="progressandplan" name="progressandplan" cols="170" rows="5" placeholder="[Guest Name] plans to continue attending [follow up appointment ]. [Guest Name] agreed to complete and activate their health and wellness plan on [agreed upon date]. While at respite [Guest Name] would like to work on [ see list on page 2/ list goals] . Peer staff will actively work with [Guest Name] to achieve improved stability and assist the guest in meeting their goals."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-header">
-                        <div class="panel-header-info">
-                            <h2>Resource and Referral Recommendations: (check all that apply)</h2>
-                        </div> 
-                    </div>
-                    <div class="fieldset">
-                        <div class="form-row--full form-row">
-                            <div class="form-row-field">
-                                <label id="lang" for="safetyanddv">Safety & DV:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="safetyanddv" value="Crisis Safety Plan" /> Crisis Safety Plan
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="safetyanddv" value="Domestic Violence Safety Plan" />Domestic Violence Safety Plan
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="safetyanddv" value="APS" />APS
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="safetyanddv" value="Safe Horizon" />Safe Horizon
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="safetyanddv" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="safetyanddvother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="housing">Housing:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="housing" value="Health Home/Medicaid" /> Health Home/Medicaid
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="housing" value="Center for Urban Community Services" />Center for Urban Community Services
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="housing" value=" Living Room/Safe Haven" /> Living Room/Safe Haven
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="housing" value="Housing Works" />Housing Works
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="housing" value="Prevention Assistance and Temporary Housing (PATH)" />Prevention Assistance and Temporary Housing (PATH)
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="housing" value="NYCHA" />NYCHA
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="housing" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="housingother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="employment">Employment:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="employment" value="Bronx Employment Support & Training" /> Bronx Employment Support & Training
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="employment" value="NYS Education Department: ACCESS-VR Bronx" />NYS Education Department: ACCESS-VR Bronx
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="employment" value="STRIVE" />STRIVE
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="employment" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="employmentother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="education">Education:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="education" value="GED Program" /> GED Program
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="education" value="College" />College
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="education" value="Financial Aid Resources" />Financial Aid Resources
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="education" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="educationother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="benefits">Benefits:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="benefits" value="SNAP" /> SNAP
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="benefits" value="SSI" />SSI
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="benefits" value="SSD" />SSD
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="benefits" value=" Unemployment (DOL)" /> Unemployment (DOL)
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="benefits" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="benefitsother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="medicalcare">Medical Care:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="medicalcare" value="Referral for Primary Care Physician" /> Referral for Primary Care Physician
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="medicalcare" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="medicalcareother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="physicalhealth">Physical Health:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="physicalhealth" value="Nutrition" /> Nutrition
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="physicalhealth" value="Exercise Routine " />Exercise Routine 
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="physicalhealth" value=" Gym membership" /> Gym membership
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="physicalhealth" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="physicalhealthother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="mentalhealth">Mental Health:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="mentalhealth" value="Kings County OP Clinic" /> Kings County OP Clinic
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="mentalhealth" value=" Visiting Nurse Service NA-MCT" /> Visiting Nurse Service NA-MCT
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="mentalhealth" value=" Gym membership" /> Gym membership
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="mentalhealth" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="mentalhealthother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="supportgroups">Support Groups:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="AA" /> AA
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="NA" />NA
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="Hearing Voices Network" />Hearing Voices Network
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="Bereavement" />Bereavement
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="Domestic Violence" />Domestic Violence
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="PTSD" />PTSD
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="Caregivers (NAMI)" />Caregivers (NAMI)
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="supportgroups" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="supportgroupsother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="socialdevelopment">Social Development:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Geel Clubhouse" /> Geel Clubhouse
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="friendshipnetwork.org ☐" />friendshipnetwork.org ☐
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="nolongerlonely.com" />nolongerlonely.com
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="socialdevelopmentother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="socialdevelopment">Self-Care:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Stress Mgt" /> Stress Mgt
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Coping Skills" />Coping Skills
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Anxiety Mgt" />Anxiety Mgt
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Self Esteem" />Self Esteem
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="socialdevelopment" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="socialdevelopmentother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="legal">Legal:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Mental Health Law Project (MFY)" /> Mental Health Law Project (MFY)
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Legal Resource Service (NAMI)" />Legal Resource Service (NAMI)
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Urban Justice Cente" />Urban Justice Cente
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="legalother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="independantlivingskills">Independent Living Skills:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="independantlivingskills" value="Home Health Aide" /> Home Health Aide
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="independantlivingskills" value="Cooking Assistance" />Cooking Assistance
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="independantlivingskills" value="Travel training" />Travel training
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="independantlivingskills" value="Money Management" />Money Management
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="independantlivingskills" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="independantlivingskillsother"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row-field">
-                                <label id="lang" for="legal">LGBTQ:</label>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="legal" value="NYC Anti-Violence Project" /> NYC Anti-Violence Project
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="legal" value=" LGBT Community Center" /> LGBT Community Center
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="legalother"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-header">
-                        <div class="panel-header-info">
-                            <h2>Description of Interventions to meet H&W Goal</h2>
-                        </div> 
-                    </div>
-                    <div class="fieldset">
-                        <div class="form-row--2up form-row control-items--inline">
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Onsite peer support during the respite stay" /> Onsite peer support during the respite stay
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Wellness Self-Management" /> Wellness Self-Management
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Psychoeducation" /> Psychoeducation
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Conflict resolution" /> Conflict resolution
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Health Navigation" /> Health Navigation
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Family support/Family and Friends Engagement" /> Family support/Family and Friends Engagement
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Mutual Self Help" /> Mutual Self Help
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Health and wellness coaching" /> Health and wellness coaching
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Advocacy" /> Advocacy
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Strengthening Living Skills" /> Strengthening Living Skills
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Psychiatric Advance Directive" /> Psychiatric Advance Directive
-                                </label>
-                            </div>
-                            <div class="form-row-field">
-                                <label>
-                                    <input type="checkbox" name="legal" value="Crisis Intervention Plan or WRAP Plan Completed" /> Crisis Intervention Plan or WRAP Plan Completed
-                                </label>
-                            </div>
-                            <div class="form-row--2up form-row control-items--inline">
-                                <div class="form-row-field">
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Coordinating with primary care, Health Home or other BH providers (on-site or through referrals) to assure collaboration and continuity in managing the crisis situation and identifying subsequent support and service systems" /> Coordinating with primary care, Health Home or other BH providers (on-site or through referrals) to assure collaboration and continuity in managing the crisis situation and identifying subsequent support and service systems
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-row--2up form-row control-items--inline">
-                                <div class="form-row-field">
-                                    <label>
-                                        <input type="checkbox" name="legal" value="Strengthening Coping techniques and mechanisms (i.e. Relaxation techniques to help reduce stress, anxiety, emerging panic or feelings of losing control)" /> Strengthening Coping techniques and mechanisms (i.e. Relaxation techniques to help reduce stress, anxiety, emerging panic or feelings of losing control)
-                                    </label>
-                                    <div class="control-items--inline control-items">
-                                        <label>
-                                            <input type="checkbox" name="legal" value="Other" /> Other:
-                                        </label>
-                                        <div class="field-inline">
-                                            <input type="text" name="legalother"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-header">
-                        <div class="panel-header-info">
-                            <h2>Any Immediate or Planned Needs Met:</h2>
-                        </div> 
-                    </div>
-                    <div class="fieldset">
-                        <div class="form-row--full form-row">
-                            <div class="form-row-field">
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="immediateorplannedneedsmet" value="Clothing" /> Clothing
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="immediateorplannedneedsmet" value="Medical" />Medical
-                                    </label>
-                                </div>
-                                <div class="control-items--inline control-items">
-                                    <label>
-                                        <input type="checkbox" name="immediateorplannedneedsmet" value="Other" /> Other:
-                                    </label>
-                                    <div class="field-inline">
-                                        <input type="text" name="immediateorplannedneedsmetother"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="form-row--submit">
-                        <input type="submit" value="Admit Guest" onclick="submitForm();" />
-                        <button class="button--secondary">Cancel</button>
-                    </div>
-                </section>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>TownHome Health King</h1>
+                  <h2 class="eyebrow">Face Sheet</h2>
+               </hgroup>
             </div>
-        </main>
-    </body>
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+                  <div class="form-row-field">
+                     <label for="firstname">First Name</label>
+                     <input type="text" id="firstname" name="firstname" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="MI">M.I.</label>
+                     <input type="text" id="mi" name="mi" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="lastname">Last Name</label>
+                     <input type="text" id="lastname" name="lastname" value="" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row">
+                  <div class="form-row-field">
+                     <label for="dob">D.O.B</label>
+                     <input id="dob" type="date" name="dob" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="individual">Gender Identity: <span>*</span></label>
+                     <div class="control-items--inline control-items">
+                        <label class="radio-label" for="gendermale">
+                        <input id="gendermale" type="radio" name="genderidentity" value="Male"
+                           required="required">
+                        Male
+                        </label>
+                        <label class="radio-label" for="genderfemale">
+                        <input id="genderfemale" type="radio" name="genderidentity" value="Female">
+                        Female
+                        </label>
+                        <label class="radio-label" for="othergender">
+                        <input id="othergender" type="radio" name="genderidentity" value="Other">
+                        Other
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row--2up form-row">
+                  <div class="form-row-field">
+                     <label for="ethnicidentity">Ethnic Identity</label>
+                     <input type="text" id="ethnicidentity" name="ethnicidentity" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="religiousidentity">Religious Identity</label>
+                     <input type="text" id="religiousidentity" name="religiousidentity" value="" />
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="guestprogress">Address</label>
+                     <textarea id="guestprogress" name="guestprogress" cols="170" rows="3"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--3up form-row">
+                  <div class="form-row-field">
+                     <label for="city">City</label>
+                     <input type="text" id="city" name="City" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="zipcode">Zip Code</label>
+                     <input type="text" id="zipcode" name="zipcode" inputmode="numeric" pattern="[0-9]*" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="lastname">Phone Number</label>
+                     <input type="text" id="phonenumber" name="phonenumber" inputmode="tel" pattern="[0-9]*" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row">
+                  <div class="form-row-field">
+                     <label for="socialsecuritynumber">Social Security Number</label>
+                     <input type="text" id="socialsecuritynumber" name="socialsecuritynumber" inputmode="numeric"
+                        pattern="[0-9]*" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="shift">Medicaid #</label>
+                     <input type="text" id="medicaid" name="medicaid" />
+                  </div>
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="guestprogress">Diagnosis(es)</label>
+                     <textarea id="diagnosis" name="diagnosis" cols="170" rows="5"></textarea>
+                  </div>
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="medication">Medication(s): (Name, Dosage and Frequency)</label>
+                     <textarea id="medication" name="medication" cols="170" rows="10"></textarea>
+                  </div>
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="medication">Emergency or Collateral Contact:</label>
+                     <input type="text" id="emergencynumber" name="emergencynumber" inputmode="tel"
+                        pattern="[0-9]*" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row">
+                  <div class="form-row-field">
+                     <label for="relationship">Relationship</label>
+                     <input type="text" id="relationship" name="relationship" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Phone Number</label>
+                     <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">Address</label>
+                     <textarea id="" name="" cols="170" rows="3"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--2up form-row">
+                  <div class="form-row-field">
+                     <label for="">City</label>
+                     <input type="text" id="" name="" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Zip Code</label>
+                     <input type="text" id="" name="" inputmode="numeric" pattern="[0-9]*" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Intake Sheet  -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>TownHome Health</h1>
+                  <h2 class="eyebrow">Crisis Respite Intake Sheet</h2>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <div class="form-row--2up form-row items-center">
+                  <div class="form-row-field">
+                     <label for="">Date of Referral</label>
+                     <input id="" type="date" name="" />
+                  </div>
+                  <div class="form-row-field">
+                     <div class="control-items--inline control-items">
+                        <label>
+                        <input type="checkbox" name="guest" value="newguest"> New Guest
+                        </label>
+                        <label>
+                        <input type="checkbox" name="guest" value="returningguest"> Returning Guest
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row--3up form-row">
+                  <div class="form-row-field">
+                     <label for="">Date of Enrollment</label>
+                     <input id="" type="date" name="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Time</label>
+                     <input id="" type="time" name="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for=""> Remaining Days</label>
+                     <input type="text" id=" remainingdays" name="remainingdays" value="" />
+                  </div>
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">What is your current emotional or psychiatric crisis (What led you to have to
+                     stay at the respite?)</label>
+                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">What do you expect / hope to obtain from your stay at the crisis respite
+                     center?</label>
+                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">"What are some strengths you have that may help both you and respite staff to
+                     manage your current crisis?</label>
+                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">"What are your triggers? (We want you to feel comfortable and safe at the
+                     respite.)</label>
+                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--2up form-row">
+                  <div class="form-row-field">
+                     <label for="">Are you knowledgeable: of your diagnosis? </label>
+                     <div class="control-items--inline control-items">
+                        <label class="radio-label" for="yourdiagnosisyes">
+                        <input id="yourdiagnosisyes" type="radio" name="diagnosis" value="Yes"
+                           required="required">
+                        Yes
+                        </label>
+                        <label class="radio-label" for="yourdiagnosisno">
+                        <input id="yourdiagnosisno" type="radio" name="diagnosis" value="No"
+                           required="required">
+                        No
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">of your medications and side effects</label>
+                     <div class="control-items--inline control-items">
+                        <label class="radio-label" for="sideeffectsyes">
+                        <input id="sideeffectsyes" type="radio" name="sideeffects" value="Male"
+                           required="required">
+                        Yes
+                        </label>
+                        <label class="radio-label" for="sideeffectsno">
+                        <input id="sideeffectsno" type="radio" name="sideeffects" value="Male"
+                           required="required">
+                        No
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">"What would you like to learn or improve on during your respite stay?</label>
+                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist Print:</label>
+                     <input type="text" id="peerspecialistprint" name="peerspecialistprint" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist Sign</label>
+                     <input type="text" id="peerspecialistsign" name="peerspecialistsign" value="" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Acknowledgment of Receipt of Health & Wellness Plan -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>Acknowledgment of Receipt of Health & Wellness Plan</h1>
+                  <h2 class="eyebrow">TownHome Health</h2>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <p>
+                  I <span class="inline-input">Your Name</span>certify that the TownHome Health went over the
+                  Health &
+                  Wellness Plan with me. I was provided a copy of the Heath & Wellness Plan and I agree
+                  to complete this document and return it to the staff within 24 hours of my intake.
+               </p>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="guestsignature" name="guestsignature" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="peerspecialist" name="peerspecialist" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer text-right">
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203 <br>(718) 473-9860</p>
+            </div>
+         </section>
+         <!-- Acknowledgment of receipt of safety guidelines and house/regulations/ rules -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h2 class="eyebrow">TownHome Health Clarendon</h2>
+                  <h1>Acknowledgment of receipt of safety guidelines and house/regulations/ rules</h1>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <p>
+                  I <span class="inline-input">Your Name</span>certify that the TownHome Health safety guidelines
+                  and house
+                  regulations/rules has been reviewed with me and I agree to comply with the safety guidelines and
+                  house
+                  rules/regulations. I was also provided with a copy of these rules.
+               </p>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="guestsignature" name="guestsignature" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="peerspecialist" name="peerspecialist" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer text-right">
+               <p>TownHome Health Residential Crisis Support Center <br>3402 Clarendon Road <br>Brooklyn, NY, 11203
+                  <br>(718) 473-9860
+               </p>
+            </div>
+         </section>
+         <!-- Townhome Health Residential Crisis Support Center Guest & Visitor Agreement -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1> Townhome Health Residential Crisis Support Center Guest & Visitor Agreement</h1>
+                  <h2 class="eyebrow">Guest Agreement</h2>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <p>We, the staff of the Townhome Residential Crisis Support Center and <span
+                  class="inline-input">Your Name</span> (guest) agree that the Townhome Residential Crisis
+                  Support Center is a temporary Residence/Respite, which can be utilized
+                  for up to 28 days.
+               </p>
+               <P>We understand that the Townhome Residential Crisis Support Center is a place where all are
+                  welcome and agree to
+                  not discriminate against any person based on race, color, national origin/nationality,
+                  disability, sex, gender, gender
+                  identity/ expression and marital status.
+               </P>
+               <p>We understand and agree that crisis beds must be occupied by the guest (You) each night of their
+                  stay, and beds
+                  cannot be held for longer than 24 hours. Guests are expected to inform staff and sign out when
+                  leaving
+                  residence/respite. Failure to follow this agreement can result in an administrative discharge.
+               </p>
+               <p>We agree to meet and engage with a Peer Specialist each day we are here, develop a Health &
+                  Wellness Plan and
+                  work on goals identified to address/resolve/manage crisis. Not meeting with staff daily can and
+                  will result in an
+                  administrative discharge. 
+               </p>
+               <p>We agree to sign in and out whenever leaving and entering the building. </p>
+               <p>We agree and understand that the Townhome Residential Crisis Support Center is not responsible
+                  for guests’
+                  personal belongings. Personal items should be stored and locked in a guest’s room when he/she is
+                  not present. It is
+                  the responsibility of a guest to ensure the room is locked. If/when personal belongings are left
+                  upon discharge, we
+                  will make reasonable effort to contact guests to arrange for pickup of any remaining belongings.
+                  Personal
+                  belongings will be held no more than 2 weeks. After 2 weeks any items left will be discarded.
+               </p>
+               <p>We agree and understand that at the end of a guest's stay, the guest must return to housing, and
+                  or address,
+                  identified/documented on post discharge plan during the enrollment and intake process. 
+               </p>
+               <p>We agree and understand it is mandatory that guests participate in all fire drills (As required
+                  by FDNY) We also
+                  understand and agree that all guests must exit the building whenever the fire alarm goes off and
+                  cannot re-enter the
+                  building until directed by the fire department or staff. (NO EXCEPTION)
+               </p>
+               <p>We agree that the guest is invited to move about the house freely but cannot enter another
+                  person’s room whether it
+                  is locked or open.
+               </p>
+               <p>We agree and understand that in accordance with HIPAA, and to respect the privacy and rights of
+                  other guests at the
+                  Townhome Residential Crisis Support Center, to not use any form of video chats/Facetime and
+                  speakerphone in
+                  common areas, including the garden or any outdoor space of the premise. 
+               </p>
+               <p>We agree to utilize headphones/earbuds while using cell phones, radio, I-Pod, tablets and laptops
+                  in common areas. 
+               </p>
+               <p>We agree that guests will not let anyone into the building and will notify staff when someone
+                  rings the doorbell. 
+               </p>
+               <p>We agree to be honest and not take or remove any item/food from the refrigerator and kitchen that
+                  does not belong
+                  to us. 
+               </p>
+               <p>We agree to not give, loan or borrow any money, bank/debit/credit cards, EBT card and personal
+                  items from other
+                  guests at the Townhome Residential Crisis Support Center. Townhome Residential Crisis Support
+                  Center is not responsible for, and will not reimburse any money, bank/debit/credit cards, EBT
+                  card and personal item given or
+                  loan and not returned. 
+               </p>
+               <p>We agree to not smoke indoors, at the entrance/in front of the building, in the driveway, and in
+                  accordance with NYS smoking policies. We agree to smoke only in the designated area of the
+                  garden. We also agree and understand that violation of this policy can and will result in an
+                  administrative discharge.
+               </p>
+               <p>We agree not to use or abuse any drugs, be they prescription or nonprescription, alcohol or
+                  Marijuana while on the premises at Townhome Residential Crisis Support Center (This includes,
+                  anywhere within the building, garden, sidewalks, in front/entrance of the building and in the
+                  driveway).
+               </p>
+               <p>We agree to be nonviolent and to talk any issue through. We understand that if a guest’s behavior
+                  presents itself as a danger to self or others and is disruptive to the other guests, this may
+                  result in a referral for emergency services and an administrative discharge.
+               </p>
+               <p>We agree there will always be someone available to speak with the guests and to reach out to each
+                  other as circumstances dictate, when we feel extremely distressed as a first response.
+               </p>
+               <p>We agree to take advantage of the house resources and food items in a responsible way.</p>
+               <p>We understand that the Townhome Residential Crisis Support Center is a shared space and agree to
+                  practice activities of daily living skills and be self-reliant in the areas of personal hygiene
+                  such as bathing/taking daily showers and cleaning up after ourselves.
+               </p>
+               <p>We understand that the Townhome Residential Crisis Support Center is a shared space and agree to
+                  always be fully dressed in all common areas of the building, including outdoor spaces of the
+                  premises.
+               </p>
+               <p>We agree and understand that the Townhome Residential Crisis Support Center is a shared space for
+                  all to enjoy and feel comfortable. Therefore, guests are not permitted to wear pajamas/sleeping
+                  clothes, underwear/under garments of any kind, robes, tank tops/wife beaters, short shorts/daisy
+                  dukes, crop tops/belly shirts or any inappropriate outfits outside of their rooms and in all
+                  common areas of the Townhome Residential Crisis Support Center.
+               </p>
+               <p>We understand and agree that all guest rooms will be inspected weekly and assistance will be
+                  provided with maintaining the cleanliness of spaces.
+               </p>
+               <p>We understand and agree that the Townhome Residential Crisis Support Center provides staple food
+                  items in accordance with the NYC department of health food guidelines that guests can
+                  cook/prepare themselves.
+               </p>
+               <p>We understand and agree to adhere to kitchen safety rules in accordance with the FDNY guidelines
+                  and the Crisis Residence/Respite safety rules.
+               </p>
+               <p>We understand and agree to adhere/abide by the Townhome Residential Crisis Support Center house
+                  and safety rules/guidelines. (A list of these rules and guidelines will be provided during
+                  intake) We also agree and understand that violation of these rules can and will result in an
+                  administrative discharge.
+               </p>
+               <p>We agree that a guest has the right to request and obtain a copy of their file at any time.</p>
+               <p>We agree that if the guest has a grievance regarding program process, staff or services, at any
+                  time during grievance procedure, they are free to contact assistance outside the program
+                  including: <b>Office of Mental Health (OMH) Customer Relations at 1-800-597-8481</b>, NYS
+                  Justice
+                  Center for the Protection of People with Special Needs 1-800-624-4143 and The Mental Hygiene
+                  Legal Service (MHLS) 646-386-5891.
+               </p>
+            </div>
+         </section>
+         <!-- Townhome Health Residential Crisis Support Center Guest & Visitor Agreement -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>Townhome Health Residential Crisis Support Center Guest & Visitor Agreement</h1>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <p>We agree and understand that if a guest (You) does not comply or adhere to this agreement,
+                  depending on the
+                  circumstances and within reason, the Townhome Residential Crisis Support Center has the right to
+                  discharge the
+                  guest.
+               </p>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="guestsignature" name="guestsignature" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="peerspecialist" name="peerspecialist" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+               <div class="text-disclaimer">
+                  <h2>VISITOR’S POLICY</h2>
+                  <p>Based on the guest’s goals, and consistent with the needs of Townhome’s Crisis Support
+                     Program, counseling will be provided to assist guests in inviting visitors. Guests agree to
+                     show good judgment with regard to the rights and safety of themselves and others. All
+                     visitors are required to sign in with staff and are to remain in the designated area for
+                     visits. Visitors are restricted from entering private spaces and must follow the same safety
+                     guidelines as our guests. We reserve the right to refuse visitors at any time. 
+                  </p>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">RESIDENT’S SIGNATURE</label>
+                     <input type="text" id="peerspecialist" name="peerspecialist" value="" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Acknowledgement of Discharge Date and Time -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>Acknowledgement of Discharge Date and Time</h1>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest’s Name</label>
+                     <input type="text" id="" name="" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">D.O.B:</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Date of Admission:</label>
+                     <input type="text" id="" name="" value="" />
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Projected Date of discharge:</label>
+                     <input id="" type="date" name="" />
+                  </div>
+               </div>
+               <p>
+                  I certify that the TownHome Health Clarendon Crisis Support Center Staff (Name)<span
+                     class="inline-input">Text Here</span>
+                  and I (aka the guest) <span class="inline-input">Text Here</span> have discussed <b>my
+                  discharge
+                  date/time from the Residence</b> on (Date)
+                  <span class="inline-input">Text Here</span> at <span class="inline-input">Text Here</span>
+                  (Guest’s Initials)
+                  <span class="inline-input">Text Here</span> (Staff’s Initials)
+               </p>
+               <p>I was informed/notified that I will be discharged on <span class="inline-input">Text
+                  Here</span>
+                  <b>at 12:00 noon.</b>
+                  <span class="inline-input">Text Here</span> (Guest’s Initials) <span class="inline-input">Text
+                  Here</span> (Staff’s Initials)
+               </p>
+               <p>I am aware that my stay cannot/will not be extended if my discharge location changes at any
+                  time during my stay. <span class="inline-input">Text Here</span> (Guest’s Initials) <span
+                     class="inline-input">Text Here</span> (Staff’s Initials)
+               </p>
+               <p>I understand that I am responsible for informing staff of any changes in my discharge plan
+                  and I will be expected to utilize any of the other identified options/locations to discharge
+                  to.
+                  Ex:
+                  Shelter. <span class="inline-input">Text Here</span> (Guest’s Initials) <span
+                     class="inline-input">Text Here</span> (Staff’s Initials)
+               </p>
+               <p>We have also discussed and confirmed my Post Respite Discharge Plan and location.
+                  I will be discharging to:
+               </p>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <div class="control-items--inline control-items">
+                        <label>
+                        <input type="checkbox" name="" value="Medicaid"> My Home
+                        </label>
+                        <label>
+                        <input type="checkbox" name="" value="Medicare">My family Member’s home
+                        </label>
+                        <label>
+                        <input type="checkbox" name="" value="Dual Eligibility "> My Friend’s Home
+                        Eligibility
+                        </label>
+                        <label>
+                        <input type="checkbox" name="" value="Uninsured">Shelter
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">Name of family member, Friend, Shelter or Other</label>
+                     <textarea id="" name="" cols="170" rows="3"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--full form-row">
+                  <div class="form-row-field">
+                     <label for="">Address/Location</label>
+                     <textarea id="" name="" cols="170" rows="3"></textarea>
+                  </div>
+               </div>
+               <div class="form-row--3up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Name (Print) </label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Signature</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date:</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer text-right">
+               <p>Residential Crisis Support and Respite Center <br>10/2/2024</p>
+            </div>
+         </section>
+         <!-- Acknowledgment of Fire Evacuation Procedures -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>Acknowledgment of Fire Evacuation Procedures</h1>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <p>
+                  I <span class="inline-input">Your Name</span>certify that I have been educated on TownHome
+                  Health’s Fire Evacuation
+                  Procedures. I understand and will comply with the procedures to the best of my
+                  ability.
+               </p>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer text-right">
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860
+               </p>
+            </div>
+         </section>
+         <!-- GUEST GRIEVANCE PROCEDURE -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="text-disclaimer">
+                  <h1>GUEST GRIEVANCE PROCEDURE</h1>
+               </div>
+            </div>
+            <div class="fieldset">
+               <p>Recipients of services may object to program function or process, staff, or services, without
+                  fear of retribution. The following grievance procedure shall apply, and is available to
+                  recipients:
+               </p>
+               <div class="subfield-group">
+                  <p>(1) Objections or complaints should be submitted in writing to the Peer Supervisor. A
+                     meeting will be immediately arranged with the guest and primary peer and peer
+                     supervisor to define the problem.
+                  </p>
+                  <p>(2) If the grievance cannot be satisfactorily resolved, among staff members, immediate
+                     supervisor, and recipient, the recipient should refer it in writing to the Program Director,
+                     who will bring it to the program’s Quality Improvement/ Administrative Committee for
+                     special review and resolution.
+                  </p>
+                  <p>(3) The complainant shall receive a written response within 5 business days of submitting the
+                     grievance.
+                  </p>
+                  <p>(4) Appeal process: If the Agency’s response is not satisfactory to the recipient, the
+                     recipient
+                     shall receive written information for appealing this response, by requesting a review by
+                     the Bronx Regional Office of the NYC Dept. of Mental Health and/or contacting <b>Office
+                     of Mental Health (OMH) Customer Relations at 1-800-597-8481</b>
+                  </p>
+                  <p> (05 ) Documentation: All recipient grievances shall be documented in the recipient’s chart.
+                     In
+                     addition, minutes of the special review committee or the Administrative/Quality
+                     Improvement Committee shall reflect its discussion of all grievances, and shall include
+                     copies of the recipient’s grievance and the agency’s response.
+                  </p>
+                  <p> Documentation shall include: date of complaint, name of recipient, nature of complaint;
+                     disposition and date of disposition; date recipient is informed of disposition; recipient’s
+                     response to disposition.
+                  </p>
+               </div>
+               <p>Throughout the procedure either the peer supervisor will assist the recipient(s) submitting a
+                  grievance. The peer supervisor will document the procedures taken. At any time throughout this
+                  process, the complainant can contact the Justice Center and the Mental Hygiene Legal Services
+                  that have been provided in their Guest agreement. In the event that an issue is unresolved, the
+                  recipient will be helped to obtain further assistance outside the program
+               </p>
+               <p>During checking in, recipients will be given the contact information for the NYS Justice Center
+                  for the Protection of People with Special Needs 1-800-624-4143, <b>Office of Mental Health
+                  (OMH) Customer Relations 1-800-597-8481</b>, as well as The Mental Hygiene Legal Service
+                  (MHLS) 646-386-5891
+               </p>
+               <p>All grievances follow agency wide, Policy and Procedure Manual.</p>
+            </div>
+            <div class="panel-footer text-right">
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860
+               </p>
+            </div>
+         </section>
+         <!-- >Acknowledgment of Receipt of Guest Agreement and Grievance Procedure -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <hgroup class="frontend-form-hgroup">
+                  <h1>Acknowledgment of Receipt of <br> Guest Agreement and Grievance Procedure</h1>
+               </hgroup>
+            </div>
+            <div class="fieldset">
+               <p>
+                  I <span class="inline-input">Your Name</span>ccertify that the Guest Agreement and Grievance
+                  Procedures of
+                  TownHome Health has been reviewed with me and I have also been provided a copy.
+               </p>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer text-right">
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860
+               </p>
+            </div>
+         </section>
+         <!-- >Acknowledgment of Receipt of Guest Agreement and Grievance Procedure -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="text-disclaimer">
+                  <h2 class="eyebrow">TownHome Health Residential Crisis Support Center</h2>
+                  <h1>Acknowledgment of Receipt of <br> Guest Agreement and Grievance Procedure</h1>
+               </div>
+            </div>
+            <div class="fieldset">
+               <p>
+                  I <span class="inline-input">Your Name</span>agreed to pick up my personal belongings from
+                  TownHome Health within
+                  7- 14 days of my discharge Date <span class="inline-input">Your Name</span> I was also informed
+                  that if I don’t pick up my belongings as
+                  agreed, they will be discarded.
+               </p>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer">
+               <p><b>TownHome Health </b></p>
+            </div>
+         </section>
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="frontend-form-hgroup">
+                  <h1>Guest Contact List</h1>
+               </div>
+            </div>
+            <div class="fieldset">
+               <p>
+                  In an effort to more effectively serve you, TownHome Health may need to find
+                  alternative methods of reaching you during and after your stay here. Could you please provide
+                  below contact information for any persons that you are comfortable having information
+                  communicated to by TownHome Health. If there is no one that you feel should be on this sheet,
+                  please write “CWR” and sign at the bottom. If at any point you would like one of the names
+                  removed from this list, please notify us and it will be reflected in our files. Thank you.
+               </p>
+               <p>My signature explicitly demonstrates that I understand the text and nature of this
+                  document.
+               </p>
+               <div class="fieldset">
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="">Name</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                     <div class="form-row-field">
+                        <label for="">Relationship to you</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                  </div>
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="lastname">Phone Number</label>
+                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     </div>
+                     <div class="form-row-field">
+                        <label for="lastname">Fax</label>
+                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     </div>
+                  </div>
+               </div>
+               <div class="fieldset">
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="">Name</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                     <div class="form-row-field">
+                        <label for="">Relationship to you</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                  </div>
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="lastname">Phone Number</label>
+                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     </div>
+                     <div class="form-row-field">
+                        <label for="lastname">Fax</label>
+                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     </div>
+                  </div>
+               </div>
+               <div class="fieldset">
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="">Name</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                     <div class="form-row-field">
+                        <label for="">Relationship to you</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                  </div>
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="lastname">Phone Number</label>
+                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     </div>
+                     <div class="form-row-field">
+                        <label for="lastname">Fax</label>
+                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Guest Signature</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="">Peer Specialist</label>
+                     <input type="text" id="" name="" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="">Date</label>
+                     <input id="" type="date" name="">
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer text-right">
+               <p>TownHome Health Clarendon <br>3402 Clarendon Road <br>Brooklyn, NY 11203 <br>(718) 473-9860</p>
+            </div>
+         </section>
+         <!-- Townhome Health Residential Crisis Support Center -->
+         <section class="panel--frontend-form panel">
+            <div class="fieldset">
+               <div class="form-row--3up form-row">
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="text-disclaimer">
+                  <h2 class="eyebrow">TownHome Health Residential Crisis Support Center</h2>
+                  <h1>Townhome Health Residential Crisis Support Center</h1>
+               </div>
+            </div>
+            <div class="fieldset">
+               <div class="fieldset">
+                  <div class="form-row--2up form-row">
+                     <div class="form-row-field">
+                        <label for="">Guest’s Name</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                     <div class="form-row-field">
+                        <label for="">Date</label>
+                        <input type="date" id="" name="" value="">
+                     </div>
+                  </div>
+                  <div class="form-row--full">
+                     <div class="form-row-field">
+                        <p>Our crisis residence offers the option of providing medication support to our guests.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual">Would you like any support with your medication(s) during your
+                        stay?</label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="stayyes">
+                           <input id="stayyes" type="radio" name="yourstay" value="Yea"
+                              required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="stayno">
+                           <input id="stayno" type="radio" name="yourstay" value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full">
+                     <div class="form-row-field">
+                        <p>If you would like support with your medications, please check the appropriate box
+                           that
+                           identifies the type of support you would like. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual"> 1. Storage of medication</label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="storagmedicationyes">
+                           <input id="storagmedicationyes" type="radio" name="storagmedication" value="Yea"
+                              required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="storagmedicationno">
+                           <input id="storagmedicationno" type="radio" name="storagmedication" value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual"> 2. Assistance with self-administering medication(s) /
+                        Supervised
+                        Medication Monitoring </label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="monitoringyes">
+                           <input id="monitoringyes" type="radio" name="medicationmonitoring" value="Yea"
+                              required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="monitoringno">
+                           <input id="monitoringno" type="radio" name="medicationmonitoring" value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual"> 3. Daily reminders to take medication(s). Staff can knock on
+                        your door during
+                        medication distribution times (morning <b>7am-8am</b> and evening <b>6pm-7pm</b> )
+                        </label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="monitoringtimeyes">
+                           <input id="monitoringtimeyes" type="radio" name="monitoringtime" value="Yea"
+                              required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="monitoringtimeno">
+                           <input id="monitoringtimeno" type="radio" name="monitoringtime" value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual">4. Assistance with / follow-up on obtaining
+                        prescriptions/refills from prescriber</label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="prescriberyes">
+                           <input id="prescriberyes" type="radio" name="prescriber" value="Yea"
+                              required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="prescriberno">
+                           <input id="prescriberno" type="radio" name="prescriber" value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual">5. Assistance with coordinating delivery/pick-up of medications
+                        from
+                        pharmacy </label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="pharmacyfromyes">
+                           <input id="pharmacyfromyes" type="radio" name="pharmacyfrom" value="Yes"
+                              required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="pharmacyfromno">
+                           <input id="pharmacyfromno" type="radio" name="pharmacyfrom" value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full form-row">
+                     <div class="form-row-field">
+                        <label for="individual">6. Provide general information/education around medication
+                        management. </label>
+                        <div class="control-items--inline control-items">
+                           <label class="radio-label" for="medicationmanagementyes">
+                           <input id="medicationmanagementyes" type="radio" name="medicationmanagement"
+                              value="Yes" required="required">
+                           Yes
+                           </label>
+                           <label class="radio-label" for="medicationmanagementno">
+                           <input id="medicationmanagementno" type="radio" name="medicationmanagement"
+                              value="No">
+                           No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full">
+                     <div class="form-row-field">
+                        <p>If you decide to receive medication management support during your stay, please be
+                           advised of
+                           the following information: 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="form-row--full">
+                     <div class="form-row-field">
+                        <p><b>1. Storage </b></p>
+                        <p>Medications must be kept in a secure, designated location that is easily accessible
+                           and
+                           easily identifiable by guest’s name.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="form-row--full">
+                     <div class="form-row-field">
+                        <p><b>2. Supervised Medication Monitoring </b></p>
+                        <p>For residents receiving Supervised Medication Monitoring: </p>
+                        <div class="subfield-group">
+                           <p>-Medications must be kept secured in a designated location and locked away at all
+                              times. 
+                           </p>
+                           <p>
+                              - Medication bottles and/or pill packs must be placed inside a plastic bin with
+                              guest’s name.
+                           </p>
+                           <p>
+                              - Guests must have a 7-day AM/PM pillbox with guest’s name and guest will refill
+                              their pillbox every 7 days.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--full">
+                     <div class="form-row-field">
+                        <p><b>3. Distribution</b></p>
+                        <div class="subfield-group">
+                           <p>Medications are disbursed twice daily, once in the morning (between 7am-8am)
+                              and once in the evening (between 6pm-7pm) unless otherwise prescribed.
+                           </p>
+                           <p> - Guests must be able to self-administer their own medications.
+                           </p>
+                           <p> - All medication support is documented and logs are maintained each time
+                              medication is monitored or self-disbursed.
+                           </p>
+                           <p>- Staff initial guest medication logs. Staff also monitor guests’ temperature at
+                              time
+                              of medication disbursement on a daily basis (at least twice a day) and document
+                              this
+                           <p> - Staff are not responsible for prescribing medications or making any changes to
+                              medication regimen, etc.. 
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-row--2up form-row signature-field">
+                     <div class="form-row-field">
+                        <label for="">Guest Signature</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                     <div class="form-row-field">
+                        <label for="">Date</label>
+                        <input id="" type="date" name="">
+                     </div>
+                  </div>
+                  <div class="form-row--2up form-row signature-field">
+                     <div class="form-row-field">
+                        <label for="">Staff signature</label>
+                        <input type="text" id="" name="" value="">
+                     </div>
+                     <div class="form-row-field">
+                        <label for="">Date</label>
+                        <input id="" type="date" name="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="panel-footer">
+               <p>TownHome Health </p>
+            </div>
+         </section>
+      </main>
+   </body>
 </html>
-
-    
-    
-      
