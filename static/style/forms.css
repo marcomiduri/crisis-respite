@@ -213,6 +213,10 @@ button:hover,
     align-items: center;
 }
 
+.control-items--inline.items-start label{
+    align-items: flex-start;
+}
+
 .signature-field input {
     border: 0;
     border-bottom: solid 1px #ddd;
