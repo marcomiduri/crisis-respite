@@ -208,10 +208,10 @@
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
                         <label>
-                           <input type="checkbox" name="newguest" id="newguest" value="newguest"> New Guest
+                           <input type="radio" name="newguest" id="newguest" value="newguest"> New Guest
                         </label>
                         <label>
-                           <input type="checkbox" name="returningguest" id="returningguest" value="returningguest">
+                           <input type="radio" name="returningguest" id="returningguest" value="returningguest">
                            Returning Guest
                         </label>
                      </div>
@@ -536,12 +536,12 @@
                
                      <div class="control-items--inline control-items items-start">
                         <label>
-                           <input type="checkbox" id="consent_yes" name="consent_choice" value="yes">
+                           <input type="radio" id="consent_yes" name="psyckes_information_access_consent" value="yes">
                            GIVE CONSENT for the provider, and their staff involved in my care, to access my health information in connection with my health care services.
                         </label>
                
                         <label>
-                           <input type="checkbox" id="consent_no" name="consent_choice" value="no">
+                           <input type="radio" id="consent_no" name="psyckes_information_access_consent" value="no">
                            I DON'T GIVE CONSENT for this provider to access my health information, but I understand they may be able to see it when state and federal laws and regulations allow it.
                         </label>
                      </div>
@@ -1243,45 +1243,45 @@
                      <p>1. Please check the appropriate box for each type of tobacco:</p>
                      <p><b>1a CIGARETTES </b></p>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="cigarettes_never" id="cigarettes_never" value="Never Used">Never Used</label>
-                        <label><input type="checkbox" name="cigarettes_past" id="cigarettes_past" value="Used in the Past">Used in the Past</label>
-                        <label><input type="checkbox" name="cigarettes_current" id="cigarettes_current" value="Currently Use">Currently Use</label>
+                        <label><input type="radio" name="cigarettes_used" value="Never Used">Never Used</label>
+                        <label><input type="radio" name="cigarettes_used" value="Used in the Past">Used in the Past</label>
+                        <label><input type="radio" name="cigarettes_used" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
                   <!-- 1b E-CIGARETTES -->
                   <div class="form-row-field">
                      <p><b>1b E-CIGARETTES/VAPE</b></p>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="ecig_never" id="ecig_never" value="Never Used">Never Used</label>
-                        <label><input type="checkbox" name="ecig_past" id="ecig_past" value="Used in the Past">Used in the Past</label>
-                        <label><input type="checkbox" name="ecig_current" id="ecig_current" value="Currently Use">Currently Use</label>
+                        <label><input type="radio" name="ecig_used" value="Never Used">Never Used</label>
+                        <label><input type="radio" name="ecig_used" value="Used in the Past">Used in the Past</label>
+                        <label><input type="radio" name="ecig_used" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
                   <!-- 1c PIPE -->
                   <div class="form-row-field">
                      <p><b>1c PIPE</b></p>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="pipe_never" id="pipe_never" value="Never Used">Never Used</label>
-                        <label><input type="checkbox" name="pipe_past" id="pipe_past" value="Used in the Past">Used in the Past</label>
-                        <label><input type="checkbox" name="pipe_current" id="pipe_current" value="Currently Use">Currently Use</label>
+                        <label><input type="radio" name="pipe_used" value="Never Used">Never Used</label>
+                        <label><input type="radio" name="pipe_used" value="Used in the Past">Used in the Past</label>
+                        <label><input type="radio" name="pipe_used" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
                   <!-- 1d CIGARS -->
                   <div class="form-row-field">
                      <p><b>1d CIGARS</b></p>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="cigars_never" id="cigars_never" value="Never Used">Never Used</label>
-                        <label><input type="checkbox" name="cigars_past" id="cigars_past" value="Used in the Past">Used in the Past</label>
-                        <label><input type="checkbox" name="cigars_current" id="cigars_current" value="Currently Use">Currently Use</label>
+                        <label><input type="radio" name="cigars_used" value="Never Used">Never Used</label>
+                        <label><input type="radio" name="cigars_used" value="Used in the Past">Used in the Past</label>
+                        <label><input type="radio" name="cigars_used" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
                   <!-- 1e CHEWING TOBACCO -->
                   <div class="form-row-field">
                      <p><b>1e CHEWING TOBACCO</b></p>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="chew_never" id="chew_never" value="Never Used">Never Used</label>
-                        <label><input type="checkbox" name="chew_past" id="chew_past" value="Used in the Past">Used in the Past</label>
-                        <label><input type="checkbox" name="chew_current" id="chew_current" value="Currently Use">Currently Use</label>
+                        <label><input type="radio" name="chewing_tobacco" value="Never Used">Never Used</label>
+                        <label><input type="radio" name="chewing_tobacco" value="Used in the Past">Used in the Past</label>
+                        <label><input type="radio" name="chewing_tobacco" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
                   <!-- Q2 -->
@@ -1335,11 +1335,11 @@
                   <div class="form-row-field">
                      <label for="household_smokers">8. Who smokes in your household? Please check all that apply:</label>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="household_none" id="household_none" value="No One">No One</label>
-                        <label><input type="checkbox" name="household_parents" id="household_parents" value="Parents">Parents</label>
-                        <label><input type="checkbox" name="household_siblings" id="household_siblings" value="Brothers/Sisters">Brothers/Sisters</label>
-                        <label><input type="checkbox" name="household_partner" id="household_partner" value="Significant Other">Significant Other</label>
-                        <label><input type="checkbox" name="household_roommates" id="household_roommates" value="Roommates">Roommates</label>
+                        <label><input type="checkbox" name="house_smokers" value="No One">No One</label>
+                        <label><input type="checkbox" name="house_smokers" value="Parents">Parents</label>
+                        <label><input type="checkbox" name="house_smokers" value="Brothers/Sisters">Brothers/Sisters</label>
+                        <label><input type="checkbox" name="house_smokers" value="Significant Other">Significant Other</label>
+                        <label><input type="checkbox" name="house_smokers" value="Roommates">Roommates</label>
                      </div>
                   </div>
                   <!-- Q9 -->
@@ -1359,16 +1359,16 @@
                      <label>10. How important is it to you to stop tobacco use now? (Please check one box)</label>
                      <div class="control-items--inline control-items">
                         <!-- Loop 1 to 10 -->
-                        <label><input type="checkbox" name="importance_1" value="1">1</label>
-                        <label><input type="checkbox" name="importance_2" value="2">2</label>
-                        <label><input type="checkbox" name="importance_3" value="3">3</label>
-                        <label><input type="checkbox" name="importance_4" value="4">4</label>
-                        <label><input type="checkbox" name="importance_5" value="5">5</label>
-                        <label><input type="checkbox" name="importance_6" value="6">6</label>
-                        <label><input type="checkbox" name="importance_7" value="7">7</label>
-                        <label><input type="checkbox" name="importance_8" value="8">8</label>
-                        <label><input type="checkbox" name="importance_9" value="9">9</label>
-                        <label><input type="checkbox" name="importance_10" value="10">10</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="1">1</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="2">2</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="3">3</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="4">4</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="5">5</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="6">6</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="7">7</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="8">8</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="9">9</label>
+                        <label><input type="radio" name="tobacco_stop_importance" value="10">10</label>
                      </div>
                   </div>
                   <!-- Q11 -->
@@ -1376,28 +1376,28 @@
                      <p><b>Tobacco-Related Illness</b></p>
                      <label>11. Have you in the past or do you now have any of the following? (Check all that apply)</label>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="illness_arrhythmia" value="Arrhythmia">Arrhythmia/Irregular Heart Beat</label>
-                        <label><input type="checkbox" name="illness_emphysema" value="Emphysema">Emphysema</label>
-                        <label><input type="checkbox" name="illness_obesity" value="Obesity">Obesity/Overweight</label>
-                        <label><input type="checkbox" name="illness_asthma" value="Asthma">Asthma or Chronic Bronchitis</label>
-                        <label><input type="checkbox" name="illness_halitosis" value="Halitosis">Halitosis/Bad Breath</label>
-                        <label><input type="checkbox" name="illness_ulcer" value="Peptic Ulcer">Peptic Ulcer</label>
-                        <label><input type="checkbox" name="illness_cancer" value="Cancer">Cancer</label>
-                        <label><input type="checkbox" name="illness_heart" value="Heart Disease">Heart Attack/Disease</label>
-                        <label><input type="checkbox" name="illness_pneumonia" value="Pneumonia">Pneumonia</label>
-                        <label><input type="checkbox" name="illness_circulation" value="Circulatory">Circulatory Problems</label>
-                        <label><input type="checkbox" name="illness_impotence" value="Impotence">Impotence</label>
-                        <label><input type="checkbox" name="illness_seizures" value="Seizures">Seizures</label>
-                        <label><input type="checkbox" name="illness_diabetes" value="Diabetes">Diabetes</label>
-                        <label><input type="checkbox" name="illness_infertility" value="Infertility">Infertility</label>
-                        <label><input type="checkbox" name="illness_stroke" value="Stroke">Stroke</label>
-                        <label><input type="checkbox" name="illness_menopause" value="Menopause">Early Menopause</label>
-                        <label><input type="checkbox" name="illness_flu" value="Flu">Influenza/Frequent Flu</label>
-                        <label><input type="checkbox" name="illness_wrinkles" value="Wrinkles">Wrinkles</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Arrhythmia">Arrhythmia/Irregular Heart Beat</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Emphysema">Emphysema</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Obesity">Obesity/Overweight</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Asthma">Asthma or Chronic Bronchitis</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Halitosis">Halitosis/Bad Breath</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Peptic Ulcer">Peptic Ulcer</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Cancer">Cancer</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Heart Disease">Heart Attack/Disease</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Pneumonia">Pneumonia</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Circulatory">Circulatory Problems</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Impotence">Impotence</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Seizures">Seizures</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Diabetes">Diabetes</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Infertility">Infertility</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Stroke">Stroke</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Menopause">Early Menopause</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Flu">Influenza/Frequent Flu</label>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Wrinkles">Wrinkles</label>
                      </div>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="illness_other" value="Other">Other illness (describe):</label>
-                        <textarea id="illness_other_desc" name="illness_other_desc" cols="170" rows="3"></textarea>
+                        <label><input type="checkbox" name="tobacco_related-illness" value="Other">Other illness (describe):</label>
+                        <textarea name="tobacco_related-illness_other_desc" cols="170" rows="3"></textarea>
                      </div>
                   </div>
                   <!-- Q12 -->
@@ -1409,22 +1409,22 @@
                      <div class="control-items--inline control-items items-start">
                        <label>
                          12a
-                         <input type="checkbox" name="quit_12a" value="12a">
+                         <input type="radio" name="desire_to_quit" value="I currently smoke/use tobacco and I do not want to quit in the next 6 months.">
                          I currently smoke/use tobacco and I do not want to quit in the next 6 months.
                        </label>
                        <label>
                          12b
-                         <input type="checkbox" name="quit_12b" value="12b">
+                         <input type="radio" name="desire_to_quit" value="I currently smoke/use tobacco and I am seriously considering quitting in the next 6 months, but not in the next 30 days.">
                          I currently smoke/use tobacco and I am seriously considering quitting in the next 6 months, but not in the next 30 days.
                        </label>
-                       <label>
+                       <label style="width: 100%;">
                          12c
-                         <input type="checkbox" name="quit_12c" value="12c">
+                         <input type="radio" name="desire_to_quit" value="I want to reduce smoking but not quit totally.">
                          I want to reduce smoking but not quit totally.
                        </label>
                        <label>
                          12d
-                         <input type="checkbox" name="quit_12d" value="12d">
+                         <input type="radio" name="desire_to_quit" value="I want to quit within the next month and want assistance.">
                          I want to quit within the next month and want assistance.
                        </label>
                      </div>
@@ -1434,16 +1434,16 @@
                   <div class="form-row-field">
                      <label>13. How confident are you that you will succeed in stopping your tobacco use now? (Please check one box)</label>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="confidence_1" value="1">1</label>
-                        <label><input type="checkbox" name="confidence_2" value="2">2</label>
-                        <label><input type="checkbox" name="confidence_3" value="3">3</label>
-                        <label><input type="checkbox" name="confidence_4" value="4">4</label>
-                        <label><input type="checkbox" name="confidence_5" value="5">5</label>
-                        <label><input type="checkbox" name="confidence_6" value="6">6</label>
-                        <label><input type="checkbox" name="confidence_7" value="7">7</label>
-                        <label><input type="checkbox" name="confidence_8" value="8">8</label>
-                        <label><input type="checkbox" name="confidence_9" value="9">9</label>
-                        <label><input type="checkbox" name="confidence_10" value="10">10</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="1">1</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="2">2</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="3">3</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="4">4</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="5">5</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="6">6</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="7">7</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="8">8</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="9">9</label>
+                        <label><input type="radio" name="tobacco_stop_confidence" value="10">10</label>
                      </div>
                   </div>
                </div>
