@@ -82,7 +82,7 @@
                      <input id="dob" type="date" name="dob" />
                   </div>
                   <div class="form-row-field">
-                     <label for="individual">Gender Identity: <span>*</span></label>
+                     <label>Gender Identity: <span>*</span></label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="gendermale">
                            <input id="gendermale" type="radio" name="genderidentity" value="Male" required="required">Male
@@ -208,10 +208,10 @@
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
                         <label>
-                           <input type="radio" name="newguest" id="newguest" value="newguest"> New Guest
+                           <input type="radio" name="guest_type" value="newguest"> New Guest
                         </label>
                         <label>
-                           <input type="radio" name="returningguest" id="returningguest" value="returningguest">
+                           <input type="radio" name="guest_type" value="returningguest">
                            Returning Guest
                         </label>
                      </div>
@@ -665,16 +665,16 @@
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
                         <label>
-                           <input type="checkbox" id="discharge_home" name="discharge_location" value="home"> My Home
+                           <input type="radio" name="discharge_location" value="home"> My Home
                         </label>
                         <label>
-                           <input type="checkbox" id="discharge_family" name="discharge_location" value="family"> My family Member's home
+                           <input type="radio" name="discharge_location" value="family"> My family Member's home
                         </label>
                         <label>
-                           <input type="checkbox" id="discharge_friend" name="discharge_location" value="friend"> My Friend's Home
+                           <input type="radio" name="discharge_location" value="friend"> My Friend's Home
                         </label>
                         <label>
-                           <input type="checkbox" id="discharge_shelter" name="discharge_location" value="shelter"> Shelter
+                           <input type="radio" name="discharge_location" value="shelter"> Shelter
                         </label>
                      </div>
                   </div>
@@ -1333,7 +1333,7 @@
                   </div>
                   <!-- Q8 -->
                   <div class="form-row-field">
-                     <label for="household_smokers">8. Who smokes in your household? Please check all that apply:</label>
+                     <label>8. Who smokes in your household? Please check all that apply:</label>
                      <div class="control-items--inline control-items">
                         <label><input type="checkbox" name="house_smokers" value="No One">No One</label>
                         <label><input type="checkbox" name="house_smokers" value="Parents">Parents</label>
@@ -1481,7 +1481,7 @@
                         <p>If any drug in <b>question 1</b> is coded <b>“yes”</b>, proceed to questions <b>2-8</b>.</p>
                         <p>If all drugs in <b>question 1</b> are <b>“no”</b>, skip to end and code <b>“no”</b> for opioid dependent.</p>
                         <div class="control-items--inline control-items">
-                           <label for="individual">a. Heroin</label>
+                           <label>a. Heroin</label>
                            <label class="radio-label" for="heroinyes">
                               <input id="heroinyes" type="radio" name="drugsheroin" value="Yea" required="required">
                               Yes
@@ -1492,7 +1492,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">b. Methadone</label>
+                           <label>b. Methadone</label>
                            <label class="radio-label" for="methadoneyes">
                               <input id="methadoneyes" type="radio" name="methadone" value="Yea" required="required">
                               Yes
@@ -1503,7 +1503,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">c. Morphine</label>
+                           <label>c. Morphine</label>
                            <label class="radio-label" for="morphineyes">
                               <input id="morphineyes" type="radio" name="morphine" value="Yea" required="required">
                               Yes
@@ -1514,7 +1514,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">d. Buprenorphine</label>
+                           <label>d. Buprenorphine</label>
                            <label class="radio-label" for="buprenorphineyes">
                               <input id="buprenorphineyes" type="radio" name="buprenorphine" value="Yea"
                                  required="required">
@@ -1526,7 +1526,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">e. MS CONTIN </label>
+                           <label>e. MS CONTIN </label>
                            <label class="radio-label" for="mscontinyes">
                               <input id="mscontinyes" type="radio" name="mscontin" value="Yea" required="required">
                               Yes
@@ -1537,7 +1537,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">e. Oxycontin </label>
+                           <label>e. Oxycontin </label>
                            <label class="radio-label" for="oxycontinyes">
                               <input id="oxycontinyes" type="radio" name="oxycontin" value="Yea" required="required">
                               Yes
@@ -1548,7 +1548,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">f. oxycodone </label>
+                           <label>f. oxycodone </label>
                            <label class="radio-label" for="oxycodoneyes">
                               <input id="oxycodoneyes" type="radio" name="oxycodone" value="Yea" required="required">
                               Yes
@@ -1559,7 +1559,7 @@
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
-                           <label for="individual">h. Other opioid analgesics (e.g., Vicodin, Darvocet, etc.)</label>
+                           <label>h. Other opioid analgesics (e.g., Vicodin, Darvocet, etc.)</label>
                            <label class="radio-label" for="opioidanalgesicsyes">
                               <input id="opioidanalgesicsyes" type="radio" name="opioidanalgesics" value="Yea"
                                  required="required">
