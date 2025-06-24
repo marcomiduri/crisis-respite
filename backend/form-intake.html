@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Intake Progress Note | TownHome King's | Crisis Respite</title>
-      <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
-      <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
-   </head>
-   <body class="view--public">
-      <header>
-         <div class="brand">
-            <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
-         </div>
-      </header>
-      <main>
-         <div class="container--narrow container">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Intake Progress Note | TownHome King's | Crisis Respite</title>
+   <link href="../static/style/screen.css" rel="stylesheet" type="text/css">
+   <link rel="icon" type="image/png" href="../static/images/favicon-32.png">
+</head>
+
+<body class="view--public">
+   <header>
+      <div class="brand">
+         <a href="/"><img id="logo" src="../static/images/logo-crisis-respite.svg" alt="Crisis Respite"></a>
+      </div>
+   </header>
+   <main>
+      <div class="container--narrow container">
          <!-- Face Sheet  -->
          <section class="panel--frontend-form panel">
             <div class="fieldset">
@@ -24,17 +26,16 @@
                            <label>Billing Department</label>
                            <div class="control-items--inline control-items">
                               <label>
-                              <input type="checkbox" name="billingdepartment" value="Medicaid"> Medicaid
+                                 <input type="checkbox" name="billingdepartment" value="Medicaid"> Medicaid
                               </label>
                               <label>
-                              <input type="checkbox" name="billingdepartment" value="Medicare">Medicare
+                                 <input type="checkbox" name="billingdepartment" value="Medicare">Medicare
                               </label>
                               <label>
-                              <input type="checkbox" name="billingdepartment" value="Dual Eligibility ">Dual
-                              Eligibility
+                                 <input type="checkbox" name="billingdepartment" value="Dual Eligibility ">Dual Eligibility
                               </label>
                               <label>
-                              <input type="checkbox" name="billingdepartment" value="Uninsured">Uninsured
+                                 <input type="checkbox" name="billingdepartment" value="Uninsured">Uninsured
                               </label>
                            </div>
                         </div>
@@ -84,16 +85,13 @@
                      <label for="individual">Gender Identity: <span>*</span></label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="gendermale">
-                        <input id="gendermale" type="radio" name="genderidentity" value="Male" required="required">
-                        Male
+                           <input id="gendermale" type="radio" name="genderidentity" value="Male" required="required">Male
                         </label>
                         <label class="radio-label" for="genderfemale">
-                        <input id="genderfemale" type="radio" name="genderidentity" value="Female">
-                        Female
+                           <input id="genderfemale" type="radio" name="genderidentity" value="Female">Female
                         </label>
                         <label class="radio-label" for="othergender">
-                        <input id="othergender" type="radio" name="genderidentity" value="Other">
-                        Other
+                           <input id="othergender" type="radio" name="genderidentity" value="Other">Other
                         </label>
                      </div>
                   </div>
@@ -117,7 +115,7 @@
                <div class="form-row--3up form-row">
                   <div class="form-row-field">
                      <label for="city">City</label>
-                     <input type="text" id="city" name="City" value="" />
+                     <input type="text" id="guestcity" name="guestcity" value="" />
                   </div>
                   <div class="form-row-field">
                      <label for="zipcode">Zip Code</label>
@@ -169,34 +167,32 @@
                      <input type="text" id="relationship" name="relationship" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Phone Number</label>
-                     <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                     <label for="emergencycontact">Phone Number</label>
+                     <input type="text" id="emergencycontact" name="emergencycontact" inputmode="tel"
+                        pattern="[0-9]*" />
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">Address</label>
-                     <textarea id="" name="" cols="170" rows="3"></textarea>
+                     <label for="Contactaddress">Address</label>
+                     <textarea id="Contactaddress" name="Contactaddress" cols="170" rows="3"></textarea>
                   </div>
                </div>
                <div class="form-row--2up form-row">
                   <div class="form-row-field">
-                     <label for="">City</label>
-                     <input type="text" id="" name="" value="" />
+                     <label for="emergencycity">City</label>
+                     <input type="text" id="emergencycity" name="emergencycity" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Zip Code</label>
-                     <input type="text" id="" name="" inputmode="numeric" pattern="[0-9]*" />
+                     <label for="emergencyzipcode">Zip Code</label>
+                     <input type="text" id="emergencyzipcode" name="emergencyzipcode" inputmode="numeric"
+                        pattern="[0-9]*" />
                   </div>
                </div>
             </div>
          </section>
          <!-- Intake Sheet  -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>TownHome Health</h1>
@@ -206,116 +202,110 @@
             <div class="fieldset">
                <div class="form-row--2up form-row items-center">
                   <div class="form-row-field">
-                     <label for="">Date of Referral</label>
-                     <input id="" type="date" name="" />
+                     <label for="dateofreferral">Date of Referral</label>
+                     <input id="dateofreferral" type="date" name="dateofreferral" />
                   </div>
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
                         <label>
-                        <input type="checkbox" name="guest" value="newguest"> New Guest
+                           <input type="checkbox" name="newguest" id="newguest" value="newguest"> New Guest
                         </label>
                         <label>
-                        <input type="checkbox" name="guest" value="returningguest"> Returning Guest
+                           <input type="checkbox" name="returningguest" id="returningguest" value="returningguest">
+                           Returning Guest
                         </label>
                      </div>
                   </div>
                </div>
                <div class="form-row--3up form-row">
                   <div class="form-row-field">
-                     <label for="">Date of Enrollment</label>
-                     <input id="" type="date" name="" />
+                     <label for="dateofenrollment">Date of Enrollment</label>
+                     <input id="dateofenrollment" type="date" name="dateofenrollment" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Time</label>
-                     <input id="" type="time" name="">
+                     <label for="time">Time</label>
+                     <input id="time" type="time" name="time">
                   </div>
                   <div class="form-row-field">
-                     <label for=""> Remaining Days</label>
-                     <input type="text" id=" remainingdays" name="remainingdays" value="" />
+                     <label for="remainingdays">Remaining Days</label>
+                     <input type="text" id="remainingdays" name="remainingdays" value="" />
                   </div>
                </div>
             </div>
             <div class="fieldset">
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">What is your current emotional or psychiatric crisis (What led you to have to
-                     stay at the respite?)</label>
-                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                     <label for="stayrespite">What is your current emotional or psychiatric crisis (What led you to have to stay at the respite?)</label>
+                     <textarea id="stayrespite" name="stayrespite" cols="170" rows="5"></textarea>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">What do you expect / hope to obtain from your stay at the crisis respite
-                     center?</label>
-                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                     <label for="respitecenter">What do you expect / hope to obtain from your stay at the crisis respite center?</label>
+                     <textarea id="respitecenter" name="respitecenter" cols="170" rows="5"></textarea>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">"What are some strengths you have that may help both you and respite staff to
-                     manage your current crisis?</label>
-                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                     <label for="currentcrisis">What are some strengths you have that may help both you and respite staff to manage your current crisis?</label>
+                     <textarea id="currentcrisis" name="currentcrisis" cols="170" rows="5"></textarea>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">"What are your triggers? (We want you to feel comfortable and safe at the
-                     respite.)</label>
-                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                     <label for="saferespite">What are your triggers? (We want you to feel comfortable and safe at the respite.)</label>
+                     <textarea id="saferespite" name="saferespite" cols="170" rows="5"></textarea>
                   </div>
                </div>
                <div class="form-row--2up form-row">
                   <div class="form-row-field">
-                     <label for="">Are you knowledgeable: of your diagnosis? </label>
+                     <label for="knowdiagnosis">Are you knowledgeable: of your diagnosis? </label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="yourdiagnosisyes">
-                        <input id="yourdiagnosisyes" type="radio" name="diagnosis" value="Yes" required="required">
-                        Yes
+                           <input id="yourdiagnosisyes" type="radio" name="diagnosis" value="Yes" required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="yourdiagnosisno">
-                        <input id="yourdiagnosisno" type="radio" name="diagnosis" value="No" required="required">
-                        No
+                           <input id="yourdiagnosisno" type="radio" name="diagnosis" value="No" required="required">
+                           No
                         </label>
                      </div>
                   </div>
                   <div class="form-row-field">
-                     <label for="">of your medications and side effects</label>
+                     <label for="knowmedications">of your medications and side effects</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="sideeffectsyes">
-                        <input id="sideeffectsyes" type="radio" name="sideeffects" value="Male" required="required">
-                        Yes
+                           <input id="sideeffectsyes" type="radio" name="sideeffects" value="Yes" required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="sideeffectsno">
-                        <input id="sideeffectsno" type="radio" name="sideeffects" value="Male" required="required">
-                        No
+                           <input id="sideeffectsno" type="radio" name="sideeffects" value="No" required="required">
+                           No
                         </label>
                      </div>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">"What would you like to learn or improve on during your respite stay?</label>
-                     <textarea id="" name="" cols="170" rows="5"></textarea>
+                     <label for="respitestay">What would you like to learn or improve on during your respite stay?</label>
+                     <textarea id="respitestay" name="respitestay" cols="170" rows="5"></textarea>
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist Print:</label>
+                     <label for="peerspecialistprint">Peer Specialist Print:</label>
                      <input type="text" id="peerspecialistprint" name="peerspecialistprint" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Peer Specialist Sign</label>
+                     <label for="peerspecialistsign">Peer Specialist Sign</label>
                      <input type="text" id="peerspecialistsign" name="peerspecialistsign" value="" />
                   </div>
                </div>
             </div>
          </section>
+
          <!-- Acknowledgment of Receipt of Health & Wellness Plan -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>Acknowledgment of Receipt of Health & Wellness Plan</h1>
@@ -323,30 +313,26 @@
                </hgroup>
             </div>
             <div class="fieldset">
-               <p>
-                  I <span class="inline-input">Your Name</span>certify that the TownHome Health went over the
-                  Health &
-                  Wellness Plan with me. I was provided a copy of the Heath & Wellness Plan and I agree
-                  to complete this document and return it to the staff within 24 hours of my intake.
+               <p>I <span class="inline-input">Your Name</span>certify that the TownHome Health went over the Health & Wellness Plan with me. I was provided a copy of the Heath & Wellness Plan and I agree to complete this document and return it to the staff within 24 hours of my intake.
                </p>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
+                     <label for="guestsignature">Guest Signature</label>
                      <input type="text" id="guestsignature" name="guestsignature" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="guestdate">Date</label>
+                     <input id="guestdate" type="date" name="guestdate" />
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
+                     <label for="peerspecialist">Peer Specialist</label>
                      <input type="text" id="peerspecialist" name="peerspecialist" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="specialistdate">Date</label>
+                     <input id="specialistdate" type="date" name="specialistdate" />
                   </div>
                </div>
             </div>
@@ -354,12 +340,9 @@
                <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203 <br>(718) 473-9860</p>
             </div>
          </section>
+
          <!-- Acknowledgment of receipt of safety guidelines and house/regulations/ rules -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h2 class="eyebrow">TownHome Health Clarendon</h2>
@@ -367,46 +350,36 @@
                </hgroup>
             </div>
             <div class="fieldset">
-               <p>
-                  I <span class="inline-input">Your Name</span>certify that the TownHome Health safety guidelines
-                  and house
-                  regulations/rules has been reviewed with me and I agree to comply with the safety guidelines and
-                  house
-                  rules/regulations. I was also provided with a copy of these rules.
+               <p>I <span class="inline-input">Your Name</span>certify that the TownHome Health safety guidelines and house regulations/rules has been reviewed with me and I agree to comply with the safety guidelines and house rules/regulations. I was also provided with a copy of these rules.
                </p>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
+                     <label for="guestsignature">Guest Signature</label>
                      <input type="text" id="guestsignature" name="guestsignature" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="guestdate">Date</label>
+                     <input id="guestdate" type="date" name="guestdate" />
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
+                     <label for="peerspecialist">Peer Specialist</label>
                      <input type="text" id="peerspecialist" name="peerspecialist" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="specialistdate">Date</label>
+                     <input id="specialistdate" type="date" name="specialistdate" />
                   </div>
                </div>
             </div>
             <div class="panel-footer text-right">
-               <p>TownHome Health Residential Crisis Support Center <br>3402 Clarendon Road <br>Brooklyn, NY, 11203
-                  <br>(718) 473-9860
-               </p>
+               <p>TownHome Health Residential Crisis Support Center <br>3402 Clarendon Road <br>Brooklyn, NY, 11203 <br>(718) 473-9860 </p>
             </div>
          </section>
+
          <!-- Townhome Health Residential Crisis Support Center Guest & Visitor Agreement -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1> Townhome Health Residential Crisis Support Center Guest & Visitor Agreement</h1>
@@ -414,200 +387,114 @@
                </hgroup>
             </div>
             <div class="fieldset">
-               <p>We, the staff of the Townhome Residential Crisis Support Center and <span class="inline-input">Your
-                  Name</span> (guest) agree that the Townhome Residential Crisis
-                  Support Center is a temporary Residence/Respite, which can be utilized
-                  for up to 28 days.
-               </p>
-               <P>We understand that the Townhome Residential Crisis Support Center is a place where all are
-                  welcome and agree to
-                  not discriminate against any person based on race, color, national origin/nationality,
-                  disability, sex, gender, gender
-                  identity/ expression and marital status.
-               </P>
-               <p>We understand and agree that crisis beds must be occupied by the guest (You) each night of their
-                  stay, and beds
-                  cannot be held for longer than 24 hours. Guests are expected to inform staff and sign out when
-                  leaving
-                  residence/respite. Failure to follow this agreement can result in an administrative discharge.
-               </p>
-               <p>We agree to meet and engage with a Peer Specialist each day we are here, develop a Health &
-                  Wellness Plan and
-                  work on goals identified to address/resolve/manage crisis. Not meeting with staff daily can and
-                  will result in an
-                  administrative discharge.
-               </p>
-               <p>We agree to sign in and out whenever leaving and entering the building. </p>
-               <p>We agree and understand that the Townhome Residential Crisis Support Center is not responsible
-                  for guests’
-                  personal belongings. Personal items should be stored and locked in a guest’s room when he/she is
-                  not present. It is
-                  the responsibility of a guest to ensure the room is locked. If/when personal belongings are left
-                  upon discharge, we
-                  will make reasonable effort to contact guests to arrange for pickup of any remaining belongings.
-                  Personal
-                  belongings will be held no more than 2 weeks. After 2 weeks any items left will be discarded.
-               </p>
-               <p>We agree and understand that at the end of a guest's stay, the guest must return to housing, and
-                  or address,
-                  identified/documented on post discharge plan during the enrollment and intake process.
-               </p>
-               <p>We agree and understand it is mandatory that guests participate in all fire drills (As required
-                  by FDNY) We also
-                  understand and agree that all guests must exit the building whenever the fire alarm goes off and
-                  cannot re-enter the
-                  building until directed by the fire department or staff. (NO EXCEPTION)
-               </p>
-               <p>We agree that the guest is invited to move about the house freely but cannot enter another
-                  person’s room whether it
-                  is locked or open.
-               </p>
-               <p>We agree and understand that in accordance with HIPAA, and to respect the privacy and rights of
-                  other guests at the
-                  Townhome Residential Crisis Support Center, to not use any form of video chats/Facetime and
-                  speakerphone in
-                  common areas, including the garden or any outdoor space of the premise.
-               </p>
-               <p>We agree to utilize headphones/earbuds while using cell phones, radio, I-Pod, tablets and laptops
-                  in common areas.
-               </p>
-               <p>We agree that guests will not let anyone into the building and will notify staff when someone
-                  rings the doorbell.
-               </p>
-               <p>We agree to be honest and not take or remove any item/food from the refrigerator and kitchen that
-                  does not belong
-                  to us.
-               </p>
-               <p>We agree to not give, loan or borrow any money, bank/debit/credit cards, EBT card and personal
-                  items from other
-                  guests at the Townhome Residential Crisis Support Center. Townhome Residential Crisis Support
-                  Center is not responsible for, and will not reimburse any money, bank/debit/credit cards, EBT
-                  card and personal item given or
-                  loan and not returned.
-               </p>
-               <p>We agree to not smoke indoors, at the entrance/in front of the building, in the driveway, and in
-                  accordance with NYS smoking policies. We agree to smoke only in the designated area of the
-                  garden. We also agree and understand that violation of this policy can and will result in an
-                  administrative discharge.
-               </p>
-               <p>We agree not to use or abuse any drugs, be they prescription or nonprescription, alcohol or
-                  Marijuana while on the premises at Townhome Residential Crisis Support Center (This includes,
-                  anywhere within the building, garden, sidewalks, in front/entrance of the building and in the
-                  driveway).
-               </p>
-               <p>We agree to be nonviolent and to talk any issue through. We understand that if a guest’s behavior
-                  presents itself as a danger to self or others and is disruptive to the other guests, this may
-                  result in a referral for emergency services and an administrative discharge.
-               </p>
-               <p>We agree there will always be someone available to speak with the guests and to reach out to each
-                  other as circumstances dictate, when we feel extremely distressed as a first response.
-               </p>
+               <p>We, the staff of the Townhome Residential Crisis Support Center and <span class="inline-input">Your Name</span> (guest) agree that the Townhome Residential Crisis Support Center is a temporary Residence/Respite, which can be utilized for up to 28 days.</p>
+            
+               <p>We understand that the Townhome Residential Crisis Support Center is a place where all are welcome and agree to not discriminate against any person based on race, color, national origin/nationality, disability, sex, gender, gender identity/expression and marital status.</p>
+            
+               <p>We understand and agree that crisis beds must be occupied by the guest (You) each night of their stay, and beds cannot be held for longer than 24 hours. Guests are expected to inform staff and sign out when leaving residence/respite. Failure to follow this agreement can result in an administrative discharge.</p>
+            
+               <p>We agree to meet and engage with a Peer Specialist each day we are here, develop a Health & Wellness Plan and work on goals identified to address/resolve/manage crisis. Not meeting with staff daily can and will result in an administrative discharge.</p>
+            
+               <p>We agree to sign in and out whenever leaving and entering the building.</p>
+            
+               <p>We agree and understand that the Townhome Residential Crisis Support Center is not responsible for guests' personal belongings. Personal items should be stored and locked in a guest's room when he/she is not present. It is the responsibility of a guest to ensure the room is locked. If/when personal belongings are left upon discharge, we will make reasonable effort to contact guests to arrange for pickup of any remaining belongings. Personal belongings will be held no more than 2 weeks. After 2 weeks any items left will be discarded.</p>
+            
+               <p>We agree and understand that at the end of a guest's stay, the guest must return to housing, and or address, identified/documented on post discharge plan during the enrollment and intake process.</p>
+            
+               <p>We agree and understand it is mandatory that guests participate in all fire drills (As required by FDNY). We also understand and agree that all guests must exit the building whenever the fire alarm goes off and cannot re-enter the building until directed by the fire department or staff. (NO EXCEPTION)</p>
+            
+               <p>We agree that the guest is invited to move about the house freely but cannot enter another person's room whether it is locked or open.</p>
+            
+               <p>We agree and understand that in accordance with HIPAA, and to respect the privacy and rights of other guests at the Townhome Residential Crisis Support Center, to not use any form of video chats/Facetime and speakerphone in common areas, including the garden or any outdoor space of the premise.</p>
+            
+               <p>We agree to utilize headphones/earbuds while using cell phones, radio, I-Pod, tablets and laptops in common areas.</p>
+            
+               <p>We agree that guests will not let anyone into the building and will notify staff when someone rings the doorbell.</p>
+            
+               <p>We agree to be honest and not take or remove any item/food from the refrigerator and kitchen that does not belong to us.</p>
+            
+               <p>We agree to not give, loan or borrow any money, bank/debit/credit cards, EBT card and personal items from other guests at the Townhome Residential Crisis Support Center. Townhome Residential Crisis Support Center is not responsible for, and will not reimburse any money, bank/debit/credit cards, EBT card and personal item given or loan and not returned.</p>
+            
+               <p>We agree to not smoke indoors, at the entrance/in front of the building, in the driveway, and in accordance with NYS smoking policies. We agree to smoke only in the designated area of the garden. We also agree and understand that violation of this policy can and will result in an administrative discharge.</p>
+            
+               <p>We agree not to use or abuse any drugs, be they prescription or nonprescription, alcohol or Marijuana while on the premises at Townhome Residential Crisis Support Center (This includes, anywhere within the building, garden, sidewalks, in front/entrance of the building and in the driveway).</p>
+            
+               <p>We agree to be nonviolent and to talk any issue through. We understand that if a guest's behavior presents itself as a danger to self or others and is disruptive to the other guests, this may result in a referral for emergency services and an administrative discharge.</p>
+            
+               <p>We agree there will always be someone available to speak with the guests and to reach out to each other as circumstances dictate, when we feel extremely distressed as a first response.</p>
+            
                <p>We agree to take advantage of the house resources and food items in a responsible way.</p>
-               <p>We understand that the Townhome Residential Crisis Support Center is a shared space and agree to
-                  practice activities of daily living skills and be self-reliant in the areas of personal hygiene
-                  such as bathing/taking daily showers and cleaning up after ourselves.
-               </p>
-               <p>We understand that the Townhome Residential Crisis Support Center is a shared space and agree to
-                  always be fully dressed in all common areas of the building, including outdoor spaces of the
-                  premises.
-               </p>
-               <p>We agree and understand that the Townhome Residential Crisis Support Center is a shared space for
-                  all to enjoy and feel comfortable. Therefore, guests are not permitted to wear pajamas/sleeping
-                  clothes, underwear/under garments of any kind, robes, tank tops/wife beaters, short shorts/daisy
-                  dukes, crop tops/belly shirts or any inappropriate outfits outside of their rooms and in all
-                  common areas of the Townhome Residential Crisis Support Center.
-               </p>
-               <p>We understand and agree that all guest rooms will be inspected weekly and assistance will be
-                  provided with maintaining the cleanliness of spaces.
-               </p>
-               <p>We understand and agree that the Townhome Residential Crisis Support Center provides staple food
-                  items in accordance with the NYC department of health food guidelines that guests can
-                  cook/prepare themselves.
-               </p>
-               <p>We understand and agree to adhere to kitchen safety rules in accordance with the FDNY guidelines
-                  and the Crisis Residence/Respite safety rules.
-               </p>
-               <p>We understand and agree to adhere/abide by the Townhome Residential Crisis Support Center house
-                  and safety rules/guidelines. (A list of these rules and guidelines will be provided during
-                  intake) We also agree and understand that violation of these rules can and will result in an
-                  administrative discharge.
-               </p>
+            
+               <p>We understand that the Townhome Residential Crisis Support Center is a shared space and agree to practice activities of daily living skills and be self-reliant in the areas of personal hygiene such as bathing/taking daily showers and cleaning up after ourselves.</p>
+            
+               <p>We understand that the Townhome Residential Crisis Support Center is a shared space and agree to always be fully dressed in all common areas of the building, including outdoor spaces of the premises.</p>
+            
+               <p>We agree and understand that the Townhome Residential Crisis Support Center is a shared space for all to enjoy and feel comfortable. Therefore, guests are not permitted to wear pajamas/sleeping clothes, underwear/under garments of any kind, robes, tank tops/wife beaters, short shorts/daisy dukes, crop tops/belly shirts or any inappropriate outfits outside of their rooms and in all common areas of the Townhome Residential Crisis Support Center.</p>
+            
+               <p>We understand and agree that all guest rooms will be inspected weekly and assistance will be provided with maintaining the cleanliness of spaces.</p>
+            
+               <p>We understand and agree that the Townhome Residential Crisis Support Center provides staple food items in accordance with the NYC department of health food guidelines that guests can cook/prepare themselves.</p>
+            
+               <p>We understand and agree to adhere to kitchen safety rules in accordance with the FDNY guidelines and the Crisis Residence/Respite safety rules.</p>
+            
+               <p>We understand and agree to adhere/abide by the Townhome Residential Crisis Support Center house and safety rules/guidelines. (A list of these rules and guidelines will be provided during intake.) We also agree and understand that violation of these rules can and will result in an administrative discharge.</p>
+            
                <p>We agree that a guest has the right to request and obtain a copy of their file at any time.</p>
-               <p>We agree that if the guest has a grievance regarding program process, staff or services, at any
-                  time during grievance procedure, they are free to contact assistance outside the program
-                  including: <b>Office of Mental Health (OMH) Customer Relations at 1-800-597-8481</b>, NYS
-                  Justice
-                  Center for the Protection of People with Special Needs 1-800-624-4143 and The Mental Hygiene
-                  Legal Service (MHLS) 646-386-5891.
-               </p>
+            
+               <p>We agree that if the guest has a grievance regarding program process, staff or services, at any time during grievance procedure, they are free to contact assistance outside the program including: <b>Office of Mental Health (OMH) Customer Relations at 1-800-597-8481</b>, NYS Justice Center for the Protection of People with Special Needs 1-800-624-4143 and The Mental Hygiene Legal Service (MHLS) 646-386-5891.</p>
             </div>
+            
          </section>
          <!-- Townhome Health Residential Crisis Support Center Guest & Visitor Agreement -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>Townhome Health Residential Crisis Support Center Guest & Visitor Agreement</h1>
                </hgroup>
             </div>
             <div class="fieldset">
-               <p>We agree and understand that if a guest (You) does not comply or adhere to this agreement,
-                  depending on the
-                  circumstances and within reason, the Townhome Residential Crisis Support Center has the right to
-                  discharge the
-                  guest.
-               </p>
+               <p>We agree and understand that if a guest (You) does not comply or adhere to this agreement, depending on the circumstances and within reason, the Townhome Residential Crisis Support Center has the right to discharge the guest.</p>
+
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
-                     <input type="text" id="guestsignature" name="guestsignature" value="" />
+                     <label for="guestsignature_visitor">Guest Signature</label>
+                     <input type="text" id="guestsignature_visitor" name="guestsignature_visitor" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="guestdate_visitor">Date</label>
+                     <input id="guestdate_visitor" type="date" name="guestdate_visitor" />
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
-                     <input type="text" id="peerspecialist" name="peerspecialist" value="" />
+                     <label for="peerspecialist_visitor">Peer Specialist</label>
+                     <input type="text" id="peerspecialist_visitor" name="peerspecialist_visitor" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="specialistdate_visitor">Date</label>
+                     <input id="specialistdate_visitor" type="date" name="specialistdate_visitor" />
                   </div>
                </div>
                <div class="text-disclaimer">
-                  <h2>VISITOR’S POLICY</h2>
-                  <p>Based on the guest’s goals, and consistent with the needs of Townhome’s Crisis Support
-                     Program, counseling will be provided to assist guests in inviting visitors. Guests agree to
-                     show good judgment with regard to the rights and safety of themselves and others. All
-                     visitors are required to sign in with staff and are to remain in the designated area for
-                     visits. Visitors are restricted from entering private spaces and must follow the same safety
-                     guidelines as our guests. We reserve the right to refuse visitors at any time.
-                  </p>
+                  <h2>VISITOR'S POLICY</h2>
+                  <p>Based on the guest's goals, and consistent with the needs of Townhome's Crisis Support Program, counseling will be provided to assist guests in inviting visitors. Guests agree to show good judgment with regard to the rights and safety of themselves and others. All visitors are required to sign in with staff and are to remain in the designated area for visits. Visitors are restricted from entering private spaces and must follow the same safety guidelines as our guests. We reserve the right to refuse visitors at any time.</p>
+
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="" />
+                     <label for="visitor_date">Date</label>
+                     <input id="visitor_date" type="date" name="visitor_date" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">RESIDENT’S SIGNATURE</label>
-                     <input type="text" id="peerspecialist" name="peerspecialist" value="" />
+                     <label for="residentsignature">RESIDENT'S SIGNATURE</label>
+                     <input type="text" id="residentsignature" name="residentsignature" value="" />
                   </div>
                </div>
             </div>
          </section>
+         
          <!-- Consent Form -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>Office of Mental Health | PSYCKES</h1>
@@ -618,164 +505,110 @@
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
                      <label class="eyebrow">Provider/Facility Name</label>
-                     <input type="text" id="" name="" value="" />
+                     <input type="text" id="provider_facility_name" name="provider_facility_name" value="" />
                   </div>
                </div>
                <div class="form-row--2up form-row">
                   <div class="form-row-field">
-                     <h3 class="eyebrow">About PSYCKES What You Need to Do </h3>
-                     <p>The New York State (NYS) Office of Mental Health maintains the Psychiatric Services and Clinical
-                        Knowledge Enhancement System (PSYCKES). This online database stores some of your medical history
-                        and other information about your health. It can help your health providers deliver the right
-                        care when you need it.
-                     </p>
-                     <p>The information in PSYCKES comes from your medical records, the NYS Medicaid database and other
-                        sources. Go to <a href="https://omh.ny.gov/omhweb/psyckes_medicaid/"
-                           target="_blank">www.psyckes.org</a> and
-                        click on About PSYCKES, to learn more about the program and where your data comes from.
-                     </p>
+                     <h3 class="eyebrow">About PSYCKES What You Need to Do</h3>
+                  
+                     <p>The New York State (NYS) Office of Mental Health maintains the Psychiatric Services and Clinical Knowledge Enhancement System (PSYCKES). This online database stores some of your medical history and other information about your health. It can help your health providers deliver the right care when you need it.</p>
+                     <p>The information in PSYCKES comes from your medical records, the NYS Medicaid database and other sources. Go to <a href="https://omh.ny.gov/omhweb/psyckes_medicaid/" target="_blank">www.psyckes.org</a> and click on About PSYCKES, to learn more about the program and where your data comes from.</p>
                      <p><b>This data includes:</b></p>
                      <p>• Your name, date of birth, address and other information that identifies you.</p>
                      <p>• Your health services paid for by Medicaid.</p>
-                     <p>• Your health care history, such as illnesses or injuries treated, test results and medicines.
-                     </p>
-                     <p>• Other information you or your health providers enter into the system, such as a health Safety
-                        Plan.
-                     </p>
+                     <p>• Your health care history, such as illnesses or injuries treated, test results and medicines.</p>
+                     <p>• Other information you or your health providers enter into the system, such as a health Safety Plan.</p>
                   </div>
                   <div class="form-row-field">
-                     <h3 class="eyebrow">What You Need to Do </h3>
-                     <p>Your information is confidential, meaning others need permission to see it. Complete this form
-                        now or at any time if you want to give or deny your providers access to your records. What you
-                        choose will not affect your right to medical care or health insurance coverage.
-                     </p>
-                     <p><b>Please read the back of this page carefully before checking one of the boxes below.
-                        Choose:</b>
-                     </p>
-                     <p><b>“I GIVE CONSENT”</b> if you want this provider, and their staff involved in your care, to
-                        see your PSYCKES information.
-                     </p>
-                     <p><b> “I DON’T GIVE CONSENT”</b> if you don’t want them to see it.</p>
-                     <p>If you don’t give consent, there are some times when this provider may be able to see your
-                        health information in PSYCKES – or get it from another provider – when state and federal laws
-                        and regulations allow it.¹ For example, if Medicaid is concerned about the quality of your
-                        health care, your provider may get access to PSYCKES to help them determine if you are getting
-                        the right care at the right time.
-                     </p>
+                     <h3 class="eyebrow">What You Need to Do</h3>
+                     <p>Your information is confidential, meaning others need permission to see it. Complete this form now or at any time if you want to give or deny your providers access to your records. What you choose will not affect your right to medical care or health insurance coverage.</p>
+                     <p><b>Please read the back of this page carefully before checking one of the boxes below. Choose:</b></p>
+                     <p><b>“I GIVE CONSENT”</b> if you want this provider, and their staff involved in your care, to see your PSYCKES information.</p>
+                     <p><b>“I DON'T GIVE CONSENT”</b> if you don't want them to see it.</p>
+                     <p>If you don't give consent, there are some times when this provider may be able to see your health information in PSYCKES - or get it from another provider - when state and federal laws and regulations allow it.¹ For example, if Medicaid is concerned about the quality of your health care, your provider may get access to PSYCKES to help them determine if you are getting the right care at the right time.</p>
                   </div>
+                  
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
                      <label><b>Your Choice. (Please check 1 box only.)</b></label>
+               
                      <div class="control-items--inline control-items items-start">
                         <label>
-                        <input type="checkbox" name="" value=""> GIVE CONSENT for the provider, and their staff
-                        involved in my care, to access my health information in connection with my health care
-                        services.
+                           <input type="checkbox" id="consent_yes" name="consent_choice" value="yes">
+                           GIVE CONSENT for the provider, and their staff involved in my care, to access my health information in connection with my health care services.
                         </label>
+               
                         <label>
-                        <input type="checkbox" name="" value="">I DON’T GIVE CONSENT for this provider to access my
-                        health information, but I understand they may be able to see it when state and federal laws
-                        and regulations allow it.
+                           <input type="checkbox" id="consent_no" name="consent_choice" value="no">
+                           I DON'T GIVE CONSENT for this provider to access my health information, but I understand they may be able to see it when state and federal laws and regulations allow it.
                         </label>
                      </div>
                   </div>
                </div>
+               
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
                      <label>Print Name of Patient</label>
-                     <input type="text" id="" name="" value="">
+                     <input type="text" id="patient_name" name="patient_name" value="">
                   </div>
                   <div class="form-row-field">
-                     <label>Patient’s Date of Birth </label>
-                     <input type="date" id="" name="" value="">
+                     <label>Patient's Date of Birth </label>
+                     <input type="date" id="patient_dob" name="patient_dob" value="">
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label>Patient’s Medicaid ID Number</label>
-                     <input type="text" id="" name="" inputmode="numeric" value="">
+                     <label>Patient's Medicaid ID Number</label>
+                     <input type="text" id="medicaid_id" name="medicaid_id" inputmode="numeric" value="">
                   </div>
                   <div class="form-row-field">
                      <label>Date</label>
-                     <input type="date" id="" name="" value="">
+                     <input type="date" id="medicaid_consent_date" name="medicaid_consent_date" value="">
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
                      <label>Print Name of Legal Representative (if applicable) </label>
-                     <input type="text" id="" name="" inputmode="numeric" value="">
+                     <input type="text" id="legal_rep_name" name="legal_rep_name" inputmode="text" value="">
                   </div>
                   <div class="form-row-field">
                      <label>Relationship of Legal Representative Patient (if applicable) </label>
-                     <input type="text" id="" name="" inputmode="numeric" value="">
+                     <input type="text" id="legal_rep_relationship" name="legal_rep_relationship" inputmode="text" value="">
                   </div>
                </div>
             </div>
             <div class="fieldset">
-               <p><b>1. How providers can use your health information.</b> They can use it only to: </p>
-               <p>• Provide medical treatment, care coordination, and related services. </p>
-               <p>• Evaluate and improve the quality of medical care. </p>
-               <p>• Notify your treatment providers in an emergency (e.g., you go to an emergency room). </p>
-               <p><b>2. What information they can access.</b> If you give consent,<span class="inline-input">TownHome
-                  Health Inc</span> can see ALL your health information in PSYCKES. This can include information from
-                  your health records, such as illnesses or injuries (for example, diabetes or a broken bone), test
-                  results (Xrays, blood tests, or screenings), assessment results, and medications. It may include care
-                  plans, safety plans, and psychiatric advanced directives you and your treatment provider develop. This
-                  information also may relate to sensitive health conditions, including but not limited to: 
-               </p>
+               <p><b>1. How providers can use your health information.</b> They can use it only to:</p>
+               <p>• Provide medical treatment, care coordination, and related services.</p>
+               <p>• Evaluate and improve the quality of medical care.</p>
+               <p>• Notify your treatment providers in an emergency (e.g., you go to an emergency room).</p>
+            
+               <p><b>2. What information they can access.</b> If you give consent, <span class="inline-input">TownHome Health Inc</span> can see ALL your health information in PSYCKES. This can include information from your health records, such as illnesses or injuries (for example, diabetes or a broken bone), test results (Xrays, blood tests, or screenings), assessment results, and medications. It may include care plans, safety plans, and psychiatric advanced directives you and your treatment provider develop. This information also may relate to sensitive health conditions, including but not limited to:</p>
                <p>• Mental health conditions</p>
-               <p>• Genetic (inherited) diseases or tests </p>
-               <p>• Alcohol or drug use </p>
+               <p>• Genetic (inherited) diseases or tests</p>
+               <p>• Alcohol or drug use</p>
                <p>• HIV/AIDS</p>
                <p>• Birth control and abortion (family planning)</p>
                <p>• Sexually transmitted diseases</p>
-               <p><b>3. Where the information comes from.</b> Any of your health services paid for by Medicaid will be
-                  part of your record. So are services you received from a state-operated psychiatric center. Some,
-                  but not all information from your medical records is stored in PSYCKES, as is data you and your
-                  doctor enter. Your online record includes your health information from other NYS databases, and
-                  new databases may be added. For the current list of data sources and more information about
-                  PSYCKES, go to: <a href="#" target="https://omh.ny.gov/omhweb/psyckes_medicaid/">www.psyckes.org </a>
-                  and see “About PSYCKES”, or ask your provider to print
-                  the list for you. 
-               </p>
-               <p><b>4. Who can access your information, with your consent. </b><span class="inline-input">TownHome
-                  Health Inc</span> ’s doctors and other staff involved in your care, as well as health care
-                  providers who are covering or on call for <span class="inline-input">TownHome Health Inc.</span> Staff
-                  members who perform the duties listed in #1 above also can access your information. 
-               </p>
-               <p><b>5. Improper access or use of your information.</b> There are penalties for improper access to or
-                  use of
-                  your PSYCKES health information. If you ever suspect that someone has seen or accessed your
-                  information – and they shouldn’t have – call: 
-               </p>
-               <p><span class="inline-input">TownHome Health Inc.</span> at <a href="tel:718-473-9860">718-473-9860</a>,
-                  or the NYS Office of Mental Health Customer Relations at <a href="tel:800-597-8481">800-597-8481</a>.
-               </p>
-               <p><b>6. Sharing of your information.</b> <span class="inline-input">TownHome Health Inc</span>may share your health information with others only when state or federal law and regulations allow it. This is true for health information in electronic or paper form. Some state and federal laws also provide special protections and additional requirements for disclosing sensitive health information, such as HIV/AIDS, and drug and alcohol treatment.1 </p>
-               <p><b>7.  This Consent Form is in effect for 3 years after the last date you received services
-                  from <span class="inline-input">TownHome Health Inc.</span>, or until the day you withdraw your consent, whichever
-                  comes first. </b>
-               </p>
-               <p>8. <b>Withdrawing your consent.</b>You can withdraw your consent at any time by signing and submitting
-                  a Withdrawal of Consent Form to <span class="inline-input">TownHome Health Inc.</span>. You also can change your consent choices by signing a new Consent Form at any time. You can get these forms at <a href="#" target="https://omh.ny.gov/omhweb/psyckes_medicaid/">www.psyckes.org </a> or from your provider by calling <span class="inline-input">TownHome Health Inc</span> at <a href="tel:18-473-9860">18-473-9860</a>  Please note, providers who get your health information through <span class="inline-input">TownHome Health Inc</span> while this
-                  Consent Form is in effect may copy or include your information in their medical records. If you
-                  withdraw your consent, they don’t have to return the information or remove it from theirrecords. 
-               </p>
-               <p><b>9. Copy of form. </b>You can receive a copy of this Consent Form after you sign it. </p>
+               <p><b>3. Where the information comes from.</b> Any of your health services paid for by Medicaid will be part of your record. So are services you received from a state-operated psychiatric center. Some, but not all information from your medical records is stored in PSYCKES, as is data you and your doctor enter. Your online record includes your health information from other NYS databases, and new databases may be added. For the current list of data sources and more information about PSYCKES, go to: <a href="https://omh.ny.gov/omhweb/psyckes_medicaid/" target="_blank">www.psyckes.org</a> and see “About PSYCKES”, or ask your provider to print the list for you.</p>
+               <p><b>4. Who can access your information, with your consent.</b> <span class="inline-input">TownHome Health Inc</span>'s doctors and other staff involved in your care, as well as health care providers who are covering or on call for <span class="inline-input">TownHome Health Inc.</span> Staff members who perform the duties listed in #1 above also can access your information.</p>
+               <p><b>5. Improper access or use of your information.</b> There are penalties for improper access to or use of your PSYCKES health information. If you ever suspect that someone has seen or accessed your information - and they shouldn't have - call:</p>
+               <p><span class="inline-input">TownHome Health Inc.</span> at <a href="tel:718-473-9860">718-473-9860</a>, or the NYS Office of Mental Health Customer Relations at <a href="tel:800-597-8481">800-597-8481</a>.</p>
+               <p><b>6. Sharing of your information.</b> <span class="inline-input">TownHome Health Inc</span> may share your health information with others only when state or federal law and regulations allow it. This is true for health information in electronic or paper form. Some state and federal laws also provide special protections and additional requirements for disclosing sensitive health information, such as HIV/AIDS, and drug and alcohol treatment.¹</p>
+               <p><b>7. This Consent Form is in effect for 3 years after the last date you received services from <span class="inline-input">TownHome Health Inc.</span>, or until the day you withdraw your consent, whichever comes first.</b></p>
+               <p><b>8. Withdrawing your consent.</b> You can withdraw your consent at any time by signing and submitting a Withdrawal of Consent Form to <span class="inline-input">TownHome Health Inc.</span> You also can change your consent choices by signing a new Consent Form at any time. You can get these forms at <a href="https://omh.ny.gov/omhweb/psyckes_medicaid/" target="_blank">www.psyckes.org</a> or from your provider by calling <span class="inline-input">TownHome Health Inc</span> at <a href="tel:18-473-9860">18-473-9860</a>. Please note, providers who get your health information through <span class="inline-input">TownHome Health Inc</span> while this Consent Form is in effect may copy or include your information in their medical records. If you withdraw your consent, they don't have to return the information or remove it from their records.</p>
+               <p><b>9. Copy of form.</b> You can receive a copy of this Consent Form after you sign it.</p>
             </div>
             <div class="panel-footer">
-               <p>1 Laws and regulations include NY Mental Hygiene Law Section 33.13, NY Public Health Law Article 27- Page 2/2 F, and federal confidentiality rules, including 42 CFR Part 2 and 45 CFR Parts 160 and 164 (also
-                  referred to as “HIPAA”).
-               </p>
+               <p>1 Laws and regulations include NY Mental Hygiene Law Section 33.13, NY Public Health Law Article 27-F, and federal confidentiality rules, including 42 CFR Part 2 and 45 CFR Parts 160 and 164 (also referred to as “HIPAA”).</p>
             </div>
+            
          </section>
+         
          <!-- Acknowledgement of Discharge Date and Time -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>Acknowledgement of Discharge Date and Time</h1>
@@ -784,97 +617,92 @@
             <div class="fieldset">
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest’s Name</label>
-                     <input type="text" id="" name="" value="" />
+                     <label for="guest_name">Guest's Name</label>
+                     <input type="text" id="guest_name" name="guest_name" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">D.O.B:</label>
-                     <input id="" type="date" name="" />
+                     <label for="dob">D.O.B:</label>
+                     <input id="dob" type="date" name="dob" />
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Date of Admission:</label>
-                     <input type="text" id="" name="" value="" />
+                     <label for="admission_date">Date of Admission:</label>
+                     <input type="text" id="admission_date" name="admission_date" value="" />
                   </div>
                   <div class="form-row-field">
-                     <label for="">Projected Date of discharge:</label>
-                     <input id="" type="date" name="" />
+                     <label for="projected_discharge_date">Projected Date of discharge:</label>
+                     <input id="projected_discharge_date" type="date" name="projected_discharge_date" />
                   </div>
                </div>
                <p>
-                  I certify that the TownHome Health Clarendon Crisis Support Center Staff (Name)<span
-                     class="inline-input">Text Here</span>
-                  and I (aka the guest) <span class="inline-input">Text Here</span> have discussed <b>my
-                  discharge
-                  date/time from the Residence</b> on (Date)
-                  <span class="inline-input">Text Here</span> at <span class="inline-input">Text Here</span>
-                  (Guest’s Initials)
-                  <span class="inline-input">Text Here</span> (Staff’s Initials)
+                  I certify that the TownHome Health Clarendon Crisis Support Center Staff (Name) 
+                  <span class="inline-input">Text Here</span> and I (aka the guest) 
+                  <span class="inline-input">Text Here</span> have discussed <b>my discharge date/time from the Residence</b> on (Date) 
+                  <span class="inline-input">Text Here</span> at <span class="inline-input">Text Here</span> 
+                  (Guest's Initials) <span class="inline-input">Text Here</span> (Staff's Initials)
                </p>
-               <p>I was informed/notified that I will be discharged on <span class="inline-input">Text
-                  Here</span>
-                  <b>at 12:00 noon.</b>
-                  <span class="inline-input">Text Here</span> (Guest’s Initials) <span class="inline-input">Text
-                  Here</span> (Staff’s Initials)
+               <p>
+                  I was informed/notified that I will be discharged on <span class="inline-input">Text Here</span> 
+                  <b>at 12:00 noon.</b> 
+                  <span class="inline-input">Text Here</span> (Guest's Initials) <span class="inline-input">Text Here</span> (Staff's Initials)
                </p>
-               <p>I am aware that my stay cannot/will not be extended if my discharge location changes at any
-                  time during my stay. <span class="inline-input">Text Here</span> (Guest’s Initials) <span
-                     class="inline-input">Text Here</span> (Staff’s Initials)
+               <p>
+                  I am aware that my stay cannot/will not be extended if my discharge location changes at any time during my stay. 
+                  <span class="inline-input">Text Here</span> (Guest's Initials) 
+                  <span class="inline-input">Text Here</span> (Staff's Initials)
                </p>
-               <p>I understand that I am responsible for informing staff of any changes in my discharge plan
-                  and I will be expected to utilize any of the other identified options/locations to discharge
-                  to.
-                  Ex:
-                  Shelter. <span class="inline-input">Text Here</span> (Guest’s Initials) <span
-                     class="inline-input">Text Here</span> (Staff’s Initials)
+               <p>
+                  I understand that I am responsible for informing staff of any changes in my discharge plan and I will be expected to utilize any of the other identified options/locations to discharge to. Ex: Shelter. 
+                  <span class="inline-input">Text Here</span> (Guest's Initials) 
+                  <span class="inline-input">Text Here</span> (Staff's Initials)
                </p>
-               <p>We have also discussed and confirmed my Post Respite Discharge Plan and location.
-                  I will be discharging to:
+               <p>
+                  We have also discussed and confirmed my Post Respite Discharge Plan and location. I will be discharging to:
                </p>
+               
                <div class="form-row--full form-row">
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
                         <label>
-                        <input type="checkbox" name="" value="Medicaid"> My Home
+                           <input type="checkbox" id="discharge_home" name="discharge_location" value="home"> My Home
                         </label>
                         <label>
-                        <input type="checkbox" name="" value="Medicare">My family Member’s home
+                           <input type="checkbox" id="discharge_family" name="discharge_location" value="family"> My family Member's home
                         </label>
                         <label>
-                        <input type="checkbox" name="" value="Dual Eligibility "> My Friend’s Home
-                        Eligibility
+                           <input type="checkbox" id="discharge_friend" name="discharge_location" value="friend"> My Friend's Home
                         </label>
                         <label>
-                        <input type="checkbox" name="" value="Uninsured">Shelter
+                           <input type="checkbox" id="discharge_shelter" name="discharge_location" value="shelter"> Shelter
                         </label>
                      </div>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">Name of family member, Friend, Shelter or Other</label>
-                     <textarea id="" name="" cols="170" rows="3"></textarea>
+                     <label for="discharge_contact_name">Name of family member, Friend, Shelter or Other</label>
+                     <textarea id="discharge_contact_name" name="discharge_contact_name" cols="170" rows="3"></textarea>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <label for="">Address/Location</label>
-                     <textarea id="" name="" cols="170" rows="3"></textarea>
+                     <label for="discharge_address">Address/Location</label>
+                     <textarea id="discharge_address" name="discharge_address" cols="170" rows="3"></textarea>
                   </div>
                </div>
                <div class="form-row--3up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Name (Print) </label>
-                     <input type="text" id="" name="" value="">
+                     <label for="guest_name_print">Guest Name (Print)</label>
+                     <input type="text" id="guest_name_print" name="guest_name_print" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Signature</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="guest_signature">Signature</label>
+                     <input type="text" id="guest_signature" name="guest_signature" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date:</label>
-                     <input id="" type="date" name="">
+                     <label for="signature_date">Date:</label>
+                     <input id="signature_date" type="date" name="signature_date">
                   </div>
                </div>
             </div>
@@ -882,12 +710,9 @@
                <p>Residential Crisis Support and Respite Center <br>10/2/2024</p>
             </div>
          </section>
+         
          <!-- Acknowledgment of Fire Evacuation Procedures -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>Acknowledgment of Fire Evacuation Procedures</h1>
@@ -895,107 +720,61 @@
             </div>
             <div class="fieldset">
                <p>
-                  I <span class="inline-input">Your Name</span>certify that I have been educated on TownHome
-                  Health’s Fire Evacuation
-                  Procedures. I understand and will comply with the procedures to the best of my
-                  ability.
+                  I <span class="inline-input">Your Name</span> certify that I have been educated on TownHome Health's Fire Evacuation Procedures. I understand and will comply with the procedures to the best of my ability.
                </p>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="guest_signature">Guest Signature</label>
+                     <input type="text" id="guest_signature" name="guest_signature" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="guest_signature_date">Date</label>
+                     <input id="guest_signature_date" type="date" name="guest_signature_date">
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="peer_specialist">Peer Specialist</label>
+                     <input type="text" id="peer_specialist" name="peer_specialist" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="peer_specialist_date">Date</label>
+                     <input id="peer_specialist_date" type="date" name="peer_specialist_date">
                   </div>
                </div>
             </div>
             <div class="panel-footer text-right">
-               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860
-               </p>
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860</p>
             </div>
          </section>
+         
          <!-- GUEST GRIEVANCE PROCEDURE -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <div class="text-disclaimer">
                   <h1>GUEST GRIEVANCE PROCEDURE</h1>
                </div>
             </div>
             <div class="fieldset">
-               <p>Recipients of services may object to program function or process, staff, or services, without
-                  fear of retribution. The following grievance procedure shall apply, and is available to
-                  recipients:
-               </p>
+               <p>Recipients of services may object to program function or process, staff, or services, without fear of retribution. The following grievance procedure shall apply, and is available to recipients:</p>
                <div class="subfield-group">
-                  <p>(1) Objections or complaints should be submitted in writing to the Peer Supervisor. A
-                     meeting will be immediately arranged with the guest and primary peer and peer
-                     supervisor to define the problem.
-                  </p>
-                  <p>(2) If the grievance cannot be satisfactorily resolved, among staff members, immediate
-                     supervisor, and recipient, the recipient should refer it in writing to the Program Director,
-                     who will bring it to the program’s Quality Improvement/ Administrative Committee for
-                     special review and resolution.
-                  </p>
-                  <p>(3) The complainant shall receive a written response within 5 business days of submitting the
-                     grievance.
-                  </p>
-                  <p>(4) Appeal process: If the Agency’s response is not satisfactory to the recipient, the
-                     recipient
-                     shall receive written information for appealing this response, by requesting a review by
-                     the Bronx Regional Office of the NYC Dept. of Mental Health and/or contacting <b>Office
-                     of Mental Health (OMH) Customer Relations at 1-800-597-8481</b>
-                  </p>
-                  <p> (05 ) Documentation: All recipient grievances shall be documented in the recipient’s chart.
-                     In
-                     addition, minutes of the special review committee or the Administrative/Quality
-                     Improvement Committee shall reflect its discussion of all grievances, and shall include
-                     copies of the recipient’s grievance and the agency’s response.
-                  </p>
-                  <p> Documentation shall include: date of complaint, name of recipient, nature of complaint;
-                     disposition and date of disposition; date recipient is informed of disposition; recipient’s
-                     response to disposition.
-                  </p>
+                  <p>(1) Objections or complaints should be submitted in writing to the Peer Supervisor. A meeting will be immediately arranged with the guest and primary peer and peer supervisor to define the problem.</p>
+                  <p>(2) If the grievance cannot be satisfactorily resolved, among staff members, immediate supervisor, and recipient, the recipient should refer it in writing to the Program Director, who will bring it to the program's Quality Improvement/Administrative Committee for special review and resolution.</p>
+                  <p>(3) The complainant shall receive a written response within 5 business days of submitting the grievance.</p>
+                  <p>(4) Appeal process: If the Agency's response is not satisfactory to the recipient, the recipient shall receive written information for appealing this response, by requesting a review by the Bronx Regional Office of the NYC Dept. of Mental Health and/or contacting <b>Office of Mental Health (OMH) Customer Relations at 1-800-597-8481</b></p>
+                  <p>(5) Documentation: All recipient grievances shall be documented in the recipient's chart. In addition, minutes of the special review committee or the Administrative/Quality Improvement Committee shall reflect its discussion of all grievances, and shall include copies of the recipient's grievance and the agency's response.</p>
+                  <p>Documentation shall include: date of complaint, name of recipient, nature of complaint; disposition and date of disposition; date recipient is informed of disposition; recipient's response to disposition.</p>
                </div>
-               <p>Throughout the procedure either the peer supervisor will assist the recipient(s) submitting a
-                  grievance. The peer supervisor will document the procedures taken. At any time throughout this
-                  process, the complainant can contact the Justice Center and the Mental Hygiene Legal Services
-                  that have been provided in their Guest agreement. In the event that an issue is unresolved, the
-                  recipient will be helped to obtain further assistance outside the program
-               </p>
-               <p>During checking in, recipients will be given the contact information for the NYS Justice Center
-                  for the Protection of People with Special Needs 1-800-624-4143, <b>Office of Mental Health
-                  (OMH) Customer Relations 1-800-597-8481</b>, as well as The Mental Hygiene Legal Service
-                  (MHLS) 646-386-5891
-               </p>
+               <p>Throughout the procedure either the peer supervisor will assist the recipient(s) submitting a grievance. The peer supervisor will document the procedures taken. At any time throughout this process, the complainant can contact the Justice Center and the Mental Hygiene Legal Services that have been provided in their Guest agreement. In the event that an issue is unresolved, the recipient will be helped to obtain further assistance outside the program.</p>
+               <p>During checking in, recipients will be given the contact information for the NYS Justice Center for the Protection of People with Special Needs 1-800-624-4143, <b>Office of Mental Health (OMH) Customer Relations 1-800-597-8481</b>, as well as The Mental Hygiene Legal Service (MHLS) 646-386-5891.</p>
                <p>All grievances follow agency wide, Policy and Procedure Manual.</p>
             </div>
             <div class="panel-footer text-right">
-               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860
-               </p>
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860</p>
             </div>
          </section>
          <!-- >Acknowledgment of Receipt of Guest Agreement and Grievance Procedure -->
          <section class="panel--frontend-form panel">
-            <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
-            </div>
             <div class="fieldset">
                <hgroup class="frontend-form-hgroup">
                   <h1>Acknowledgment of Receipt of <br> Guest Agreement and Grievance Procedure</h1>
@@ -1003,37 +782,35 @@
             </div>
             <div class="fieldset">
                <p>
-                  I <span class="inline-input">Your Name</span>ccertify that the Guest Agreement and Grievance
-                  Procedures of
-                  TownHome Health has been reviewed with me and I have also been provided a copy.
+                  I <span class="inline-input">Your Name</span> certify that the Guest Agreement and Grievance Procedures of TownHome Health has been reviewed with me and I have also been provided a copy.
                </p>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="guest_signature_receipt">Guest Signature</label>
+                     <input type="text" id="guest_signature_receipt" name="guest_signature_receipt" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="guest_signature_date_receipt">Date</label>
+                     <input id="guest_signature_date_receipt" type="date" name="guest_signature_date_receipt">
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="peer_specialist_receipt">Peer Specialist</label>
+                     <input type="text" id="peer_specialist_receipt" name="peer_specialist_receipt" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="peer_specialist_date_receipt">Date</label>
+                     <input id="peer_specialist_date_receipt" type="date" name="peer_specialist_date_receipt">
                   </div>
                </div>
             </div>
             <div class="panel-footer text-right">
-               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860
-               </p>
+               <p>TownHome Health <br>3402 Clarendon Rd <br>Brooklyn, NY 11203<br>(718) 473-9860</p>
             </div>
          </section>
-         <!-- >Acknowledgment of Receipt of Guest Agreement and Grievance Procedure -->
+         
+         <!-- >Acknowledgment of Receipt of Guest Agreement and Grievance Procedure (TownHome Health Residential Crisis) -->
          <section class="panel--frontend-form panel">
             <div class="fieldset">
                <div class="form-row--3up form-row">
@@ -1047,30 +824,28 @@
             </div>
             <div class="fieldset">
                <p>
-                  I <span class="inline-input">Your Name</span>agreed to pick up my personal belongings from
-                  TownHome Health within
-                  7- 14 days of my discharge Date <span class="inline-input">Your Name</span> I was also informed
-                  that if I don’t pick up my belongings as
-                  agreed, they will be discarded.
+                  I <span class="inline-input">Your Name</span> agreed to pick up my personal belongings from TownHome Health within 7–14 days of my discharge Date <span class="inline-input">Your Name</span>. I was also informed that if I don't pick up my belongings as agreed, they will be discarded.
                </p>
+            
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="guest_signature_belonging">Guest Signature</label>
+                     <input type="text" id="guest_signature_belonging" name="guest_signature_belonging" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="guest_date_belonging">Date</label>
+                     <input type="date" id="guest_date_belonging" name="guest_date_belonging">
                   </div>
                </div>
+            
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="peer_specialist_belonging">Peer Specialist</label>
+                     <input type="text" id="peer_specialist_belonging" name="peer_specialist_belonging" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="peer_specialist_date_belonging">Date</label>
+                     <input type="date" id="peer_specialist_date_belonging" name="peer_specialist_date_belonging">
                   </div>
                </div>
             </div>
@@ -1078,6 +853,7 @@
                <p><b>TownHome Health </b></p>
             </div>
          </section>
+         
          <section class="panel--frontend-form panel">
             <div class="fieldset">
                <div class="form-row--3up form-row">
@@ -1090,100 +866,103 @@
             </div>
             <div class="fieldset">
                <p>
-                  In an effort to more effectively serve you, TownHome Health may need to find
-                  alternative methods of reaching you during and after your stay here. Could you please provide
-                  below contact information for any persons that you are comfortable having information
-                  communicated to by TownHome Health. If there is no one that you feel should be on this sheet,
-                  please write “CWR” and sign at the bottom. If at any point you would like one of the names
-                  removed from this list, please notify us and it will be reflected in our files. Thank you.
-               </p>
-               <p>My signature explicitly demonstrates that I understand the text and nature of this
-                  document.
-               </p>
+                  In an effort to more effectively serve you, TownHome Health may need to find alternative methods of reaching you during and after your stay here. Could you please provide below contact information for any persons that you are comfortable having information communicated to by TownHome Health. If there is no one that you feel should be on this sheet, please write “CWR” and sign at the bottom. If at any point you would like one of the names removed from this list, please notify us and it will be reflected in our files. Thank you.
+                </p>
+                <p>
+                  My signature explicitly demonstrates that I understand the text and nature of this document.
+                </p>
+         
+               <!-- Contact 1 -->
                <div class="fieldset">
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="">Name</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="contact1_name">Name</label>
+                        <input type="text" id="contact1_name" name="contact1_name" value="">
                      </div>
                      <div class="form-row-field">
-                        <label for="">Relationship to you</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="contact1_relationship">Relationship to you</label>
+                        <input type="text" id="contact1_relationship" name="contact1_relationship" value="">
                      </div>
                   </div>
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="lastname">Phone Number</label>
-                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                        <label for="contact1_phone">Phone Number</label>
+                        <input type="text" id="contact1_phone" name="contact1_phone" inputmode="tel" pattern="[0-9]*" />
                      </div>
                      <div class="form-row-field">
-                        <label for="lastname">Fax</label>
-                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                        <label for="contact1_fax">Fax</label>
+                        <input type="text" id="contact1_fax" name="contact1_fax" inputmode="tel" pattern="[0-9]*" />
                      </div>
                   </div>
                </div>
+         
+               <!-- Contact 2 -->
                <div class="fieldset">
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="">Name</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="contact2_name">Name</label>
+                        <input type="text" id="contact2_name" name="contact2_name" value="">
                      </div>
                      <div class="form-row-field">
-                        <label for="">Relationship to you</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="contact2_relationship">Relationship to you</label>
+                        <input type="text" id="contact2_relationship" name="contact2_relationship" value="">
                      </div>
                   </div>
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="lastname">Phone Number</label>
-                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                        <label for="contact2_phone">Phone Number</label>
+                        <input type="text" id="contact2_phone" name="contact2_phone" inputmode="tel" pattern="[0-9]*" />
                      </div>
                      <div class="form-row-field">
-                        <label for="lastname">Fax</label>
-                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                        <label for="contact2_fax">Fax</label>
+                        <input type="text" id="contact2_fax" name="contact2_fax" inputmode="tel" pattern="[0-9]*" />
                      </div>
                   </div>
                </div>
+         
+               <!-- Contact 3 -->
                <div class="fieldset">
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="">Name</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="contact3_name">Name</label>
+                        <input type="text" id="contact3_name" name="contact3_name" value="">
                      </div>
                      <div class="form-row-field">
-                        <label for="">Relationship to you</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="contact3_relationship">Relationship to you</label>
+                        <input type="text" id="contact3_relationship" name="contact3_relationship" value="">
                      </div>
                   </div>
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="lastname">Phone Number</label>
-                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                        <label for="contact3_phone">Phone Number</label>
+                        <input type="text" id="contact3_phone" name="contact3_phone" inputmode="tel" pattern="[0-9]*" />
                      </div>
                      <div class="form-row-field">
-                        <label for="lastname">Fax</label>
-                        <input type="text" id="" name="" inputmode="tel" pattern="[0-9]*" />
+                        <label for="contact3_fax">Fax</label>
+                        <input type="text" id="contact3_fax" name="contact3_fax" inputmode="tel" pattern="[0-9]*" />
                      </div>
+                  </div>
+               </div>
+         
+               <!-- Signature -->
+               <div class="form-row--2up form-row signature-field">
+                  <div class="form-row-field">
+                     <label for="guest_signature_contact">Guest Signature</label>
+                     <input type="text" id="guest_signature_contact" name="guest_signature_contact" value="">
+                  </div>
+                  <div class="form-row-field">
+                     <label for="guest_signature_date_contact">Date</label>
+                     <input id="guest_signature_date_contact" type="date" name="guest_signature_date_contact">
                   </div>
                </div>
                <div class="form-row--2up form-row signature-field">
                   <div class="form-row-field">
-                     <label for="">Guest Signature</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="peer_specialist_contact">Peer Specialist</label>
+                     <input type="text" id="peer_specialist_contact" name="peer_specialist_contact" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
-                  </div>
-               </div>
-               <div class="form-row--2up form-row signature-field">
-                  <div class="form-row-field">
-                     <label for="">Peer Specialist</label>
-                     <input type="text" id="" name="" value="">
-                  </div>
-                  <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input id="" type="date" name="">
+                     <label for="peer_specialist_date_contact">Date</label>
+                     <input id="peer_specialist_date_contact" type="date" name="peer_specialist_date_contact">
                   </div>
                </div>
             </div>
@@ -1191,11 +970,11 @@
                <p>TownHome Health Clarendon <br>3402 Clarendon Road <br>Brooklyn, NY 11203 <br>(718) 473-9860</p>
             </div>
          </section>
+         
          <!-- Townhome Health Residential Crisis Support Center -->
          <section class="panel--frontend-form panel">
             <div class="fieldset">
-               <div class="form-row--3up form-row">
-               </div>
+               <div class="form-row--3up form-row"></div>
             </div>
             <div class="fieldset">
                <div class="text-disclaimer">
@@ -1207,232 +986,213 @@
                <div class="fieldset">
                   <div class="form-row--2up form-row">
                      <div class="form-row-field">
-                        <label for="">Guest’s Name</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="guest_name">Guest's Name</label>
+                        <input type="text" id="guest_name" name="guest_name" value="">
                      </div>
                      <div class="form-row-field">
-                        <label for="">Date</label>
-                        <input type="date" id="" name="" value="">
+                        <label for="entry_date">Date</label>
+                        <input type="date" id="entry_date" name="entry_date" value="">
                      </div>
                   </div>
+         
                   <div class="form-row--full">
                      <div class="form-row-field">
-                        <p>Our crisis residence offers the option of providing medication support to our guests.
-                        </p>
+                        <p>Our crisis residence offers the option of providing medication support to our guests.</p>
                      </div>
                   </div>
+         
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual">Would you like any support with your medication(s) during your
-                        stay?</label>
+                        <label for="yourstay">Would you like any support with your medication(s) during your stay?</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="stayyes">
-                           <input id="stayyes" type="radio" name="yourstay" value="Yea" required="required">
-                           Yes
+                              <input id="stayyes" type="radio" name="yourstay" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="stayno">
-                           <input id="stayno" type="radio" name="yourstay" value="No">
-                           No
+                              <input id="stayno" type="radio" name="yourstay" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full">
                      <div class="form-row-field">
-                        <p>If you would like support with your medications, please check the appropriate box
-                           that
-                           identifies the type of support you would like.
-                        </p>
+                        <p>
+                           If you would like support with your medications, please check the appropriate box that identifies the type of support you would like.
+                         </p>
                      </div>
                   </div>
+         
+                  <!-- Support Options -->
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual"> 1. Storage of medication</label>
+                        <label for="storagmedication">1. Storage of medication</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="storagmedicationyes">
-                           <input id="storagmedicationyes" type="radio" name="storagmedication" value="Yea"
-                              required="required">
-                           Yes
+                              <input id="storagmedicationyes" type="radio" name="storagmedication" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="storagmedicationno">
-                           <input id="storagmedicationno" type="radio" name="storagmedication" value="No">
-                           No
+                              <input id="storagmedicationno" type="radio" name="storagmedication" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual"> 2. Assistance with self-administering medication(s) /
-                        Supervised
-                        Medication Monitoring </label>
+                        <label for="medicationmonitoring">2. Assistance with self-administering medication(s) / Supervised Medication Monitoring</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="monitoringyes">
-                           <input id="monitoringyes" type="radio" name="medicationmonitoring" value="Yea"
-                              required="required">
-                           Yes
+                              <input id="monitoringyes" type="radio" name="medicationmonitoring" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="monitoringno">
-                           <input id="monitoringno" type="radio" name="medicationmonitoring" value="No">
-                           No
+                              <input id="monitoringno" type="radio" name="medicationmonitoring" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual"> 3. Daily reminders to take medication(s). Staff can knock on
-                        your door during
-                        medication distribution times (morning <b>7am-8am</b> and evening <b>6pm-7pm</b> )
-                        </label>
+                        <label for="monitoringtime">3. Daily reminders to take medication(s)</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="monitoringtimeyes">
-                           <input id="monitoringtimeyes" type="radio" name="monitoringtime" value="Yea"
-                              required="required">
-                           Yes
+                              <input id="monitoringtimeyes" type="radio" name="monitoringtime" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="monitoringtimeno">
-                           <input id="monitoringtimeno" type="radio" name="monitoringtime" value="No">
-                           No
+                              <input id="monitoringtimeno" type="radio" name="monitoringtime" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual">4. Assistance with / follow-up on obtaining
-                        prescriptions/refills from prescriber</label>
+                        <label for="prescriber">4. Assistance with / follow-up on obtaining prescriptions/refills from prescriber</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="prescriberyes">
-                           <input id="prescriberyes" type="radio" name="prescriber" value="Yea" required="required">
-                           Yes
+                              <input id="prescriberyes" type="radio" name="prescriber" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="prescriberno">
-                           <input id="prescriberno" type="radio" name="prescriber" value="No">
-                           No
+                              <input id="prescriberno" type="radio" name="prescriber" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual">5. Assistance with coordinating delivery/pick-up of medications
-                        from
-                        pharmacy </label>
+                        <label for="pharmacyfrom">5. Assistance with coordinating delivery/pick-up of medications from pharmacy</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="pharmacyfromyes">
-                           <input id="pharmacyfromyes" type="radio" name="pharmacyfrom" value="Yes"
-                              required="required">
-                           Yes
+                              <input id="pharmacyfromyes" type="radio" name="pharmacyfrom" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="pharmacyfromno">
-                           <input id="pharmacyfromno" type="radio" name="pharmacyfrom" value="No">
-                           No
+                              <input id="pharmacyfromno" type="radio" name="pharmacyfrom" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full form-row">
                      <div class="form-row-field">
-                        <label for="individual">6. Provide general information/education around medication
-                        management. </label>
+                        <label for="medicationmanagement">6. Provide general information/education around medication management</label>
                         <div class="control-items--inline control-items">
                            <label class="radio-label" for="medicationmanagementyes">
-                           <input id="medicationmanagementyes" type="radio" name="medicationmanagement" value="Yes"
-                              required="required">
-                           Yes
+                              <input id="medicationmanagementyes" type="radio" name="medicationmanagement" value="Yes" required>
+                              Yes
                            </label>
                            <label class="radio-label" for="medicationmanagementno">
-                           <input id="medicationmanagementno" type="radio" name="medicationmanagement" value="No">
-                           No
+                              <input id="medicationmanagementno" type="radio" name="medicationmanagement" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
+         
+                  <!-- Advisory Section -->
                   <div class="form-row--full">
                      <div class="form-row-field">
-                        <p>If you decide to receive medication management support during your stay, please be
-                           advised of
-                           the following information:
-                        </p>
+                        <p>If you decide to receive medication management support during your stay, please be advised of the following information:</p>
                      </div>
                   </div>
+         
                   <div class="form-row--full">
                      <div class="form-row-field">
-                        <p><b>1. Storage </b></p>
-                        <p>Medications must be kept in a secure, designated location that is easily accessible
-                           and
-                           easily identifiable by guest’s name.
-                        </p>
+                        <p><b>1. Storage</b></p>
+                        <p>Medications must be kept in a secure, designated location that is easily accessible and easily identifiable by guest's name.</p>
                      </div>
                   </div>
+         
                   <div class="form-row--full">
                      <div class="form-row-field">
-                        <p><b>2. Supervised Medication Monitoring </b></p>
-                        <p>For residents receiving Supervised Medication Monitoring: </p>
+                        <p><b>2. Supervised Medication Monitoring</b></p>
+                        <p>For residents receiving Supervised Medication Monitoring:</p>
                         <div class="subfield-group">
-                           <p>-Medications must be kept secured in a designated location and locked away at all
-                              times.
-                           </p>
-                           <p>
-                              - Medication bottles and/or pill packs must be placed inside a plastic bin with
-                              guest’s name.
-                           </p>
-                           <p>
-                              - Guests must have a 7-day AM/PM pillbox with guest’s name and guest will refill
-                              their pillbox every 7 days.
-                           </p>
+                           <p>- Medications must be kept secured in a designated location and locked away at all times.</p>
+                           <p>- Medication bottles and/or pill packs must be placed inside a plastic bin with guest's name.</p>
+                           <p>- Guests must have a 7-day AM/PM pillbox with guest's name and guest will refill their pillbox every 7 days.</p>
                         </div>
                      </div>
                   </div>
+         
                   <div class="form-row--full">
                      <div class="form-row-field">
                         <p><b>3. Distribution</b></p>
                         <div class="subfield-group">
-                           <p>Medications are disbursed twice daily, once in the morning (between 7am-8am)
-                              and once in the evening (between 6pm-7pm) unless otherwise prescribed.
+                           <p>
+                             Medications are disbursed twice daily, once in the morning (between 7am–8am) and once in the evening (between 6pm–7pm) unless otherwise prescribed.
                            </p>
-                           <p> - Guests must be able to self-administer their own medications.
-                           </p>
-                           <p> - All medication support is documented and logs are maintained each time
-                              medication is monitored or self-disbursed.
-                           </p>
-                           <p>- Staff initial guest medication logs. Staff also monitor guests’ temperature at
-                              time
-                              of medication disbursement on a daily basis (at least twice a day) and document
-                              this
-                           <p> - Staff are not responsible for prescribing medications or making any changes to
-                              medication regimen, etc..
-                           </p>
-                        </div>
+                           <p>- Guests must be able to self-administer their own medications.</p>
+                           <p>- All medication support is documented and logs are maintained each time medication is monitored or self-disbursed.</p>
+                           <p>- Staff initial guest medication logs. Staff also monitor guests' temperature at time of medication disbursement on a daily basis (at least twice a day) and document this.</p>
+                           <p>- Staff are not responsible for prescribing medications or making any changes to medication regimen, etc.</p>
+                         </div>
+                         
                      </div>
                   </div>
+         
+                  <!-- Signature -->
                   <div class="form-row--2up form-row signature-field">
                      <div class="form-row-field">
-                        <label for="">Guest Signature</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="guest_signature">Guest Signature</label>
+                        <input type="text" id="guest_signature" name="guest_signature" value="">
                      </div>
                      <div class="form-row-field">
-                        <label for="">Date</label>
-                        <input id="" type="date" name="">
+                        <label for="guest_signature_date">Date</label>
+                        <input type="date" id="guest_signature_date" name="guest_signature_date">
                      </div>
                   </div>
+         
                   <div class="form-row--2up form-row signature-field">
                      <div class="form-row-field">
-                        <label for="">Staff signature</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="staff_signature">Staff Signature</label>
+                        <input type="text" id="staff_signature" name="staff_signature" value="">
                      </div>
                      <div class="form-row-field">
-                        <label for="">Date</label>
-                        <input id="" type="date" name="">
+                        <label for="staff_signature_date">Date</label>
+                        <input type="date" id="staff_signature_date" name="staff_signature_date">
                      </div>
                   </div>
                </div>
             </div>
             <div class="panel-footer">
-               <p>TownHome Health </p>
+               <p>TownHome Health</p>
             </div>
          </section>
+         
          <!-- Consum er Self-Report Tobac c o Assessm ent  -->
          <section class="panel--frontend-form panel">
             <div class="fieldset">
@@ -1443,289 +1203,256 @@
             <div class="fieldset">
                <div class="form-row--2up form-row">
                   <div class="form-row-field">
-                     <label for="">Name</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="consumer_name">Name</label>
+                     <input type="text" id="consumer_name" name="consumer_name" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="individual">Gender</label>
+                     <label for="consumermale">Gender</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="consumermale">
-                        <input id="consumermale" type="radio" name="consumergender" value="Male" required="required">
-                        Male
+                           <input id="consumermale" type="radio" name="consumergender" value="Male" required="required">
+                           Male
                         </label>
                         <label class="radio-label" for="consumerfemale">
-                        <input id="consumerfemale" type="radio" name="consumergender" value="Female">
-                        Female
+                           <input id="consumerfemale" type="radio" name="consumergender" value="Female">
+                           Female
                         </label>
                      </div>
                   </div>
                </div>
                <div class="form-row--3up form-row">
                   <div class="form-row-field">
-                     <label for="">Date</label>
-                     <input type="date" id="" name="" value="">
+                     <label for="consumer_date">Date</label>
+                     <input type="date" id="consumer_date" name="consumer_date" value="">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Age</label>
-                     <input type="text" id="" name="" inputmode="numeric">
+                     <label for="consumer_age">Age</label>
+                     <input type="text" id="consumer_age" name="consumer_age" inputmode="numeric">
                   </div>
                   <div class="form-row-field">
-                     <label for="">Today’s date</label>
-                     <input type="date" id="" name="" value="">
+                     <label for="consumer_today_date">Today's date</label>
+                     <input type="date" id="consumer_today_date" name="consumer_today_date" value="">
                   </div>
                </div>
             </div>
             <div class="fieldset">
-               <p><b>Tobacco Use –</b></p>
+               <p><b>Tobacco Use -</b></p>
                <div class="form-row--full form-row">
+                  <!-- 1a CIGARETTES -->
                   <div class="form-row-field">
-                     <p>1. Please check the appropriate box for each type of tobacco:
-                     </p>
+                     <p>1. Please check the appropriate box for each type of tobacco:</p>
                      <p><b>1a CIGARETTES </b></p>
                      <div class="control-items--inline control-items">
-                        <label>
-                        <input type="checkbox" name="" value="">Never Used
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Used in the Past
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Currently Use
-                        </label>
+                        <label><input type="checkbox" name="cigarettes_never" id="cigarettes_never" value="Never Used">Never Used</label>
+                        <label><input type="checkbox" name="cigarettes_past" id="cigarettes_past" value="Used in the Past">Used in the Past</label>
+                        <label><input type="checkbox" name="cigarettes_current" id="cigarettes_current" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
+                  <!-- 1b E-CIGARETTES -->
                   <div class="form-row-field">
                      <p><b>1b E-CIGARETTES/VAPE</b></p>
                      <div class="control-items--inline control-items">
-                        <label>
-                        <input type="checkbox" name="" value="">Never Used
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Used in the Past
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Currently Use
-                        </label>
+                        <label><input type="checkbox" name="ecig_never" id="ecig_never" value="Never Used">Never Used</label>
+                        <label><input type="checkbox" name="ecig_past" id="ecig_past" value="Used in the Past">Used in the Past</label>
+                        <label><input type="checkbox" name="ecig_current" id="ecig_current" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
+                  <!-- 1c PIPE -->
                   <div class="form-row-field">
                      <p><b>1c PIPE</b></p>
                      <div class="control-items--inline control-items">
-                        <label>
-                        <input type="checkbox" name="" value="">Never Used
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Used in the Past
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Currently Use
-                        </label>
+                        <label><input type="checkbox" name="pipe_never" id="pipe_never" value="Never Used">Never Used</label>
+                        <label><input type="checkbox" name="pipe_past" id="pipe_past" value="Used in the Past">Used in the Past</label>
+                        <label><input type="checkbox" name="pipe_current" id="pipe_current" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
+                  <!-- 1d CIGARS -->
                   <div class="form-row-field">
                      <p><b>1d CIGARS</b></p>
                      <div class="control-items--inline control-items">
-                        <label>
-                        <input type="checkbox" name="" value="">Never Used
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Used in the Past
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Currently Use
-                        </label>
+                        <label><input type="checkbox" name="cigars_never" id="cigars_never" value="Never Used">Never Used</label>
+                        <label><input type="checkbox" name="cigars_past" id="cigars_past" value="Used in the Past">Used in the Past</label>
+                        <label><input type="checkbox" name="cigars_current" id="cigars_current" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
+                  <!-- 1e CHEWING TOBACCO -->
                   <div class="form-row-field">
-                     <p><b>1e CHEWING TOBACCO Never Used</b></p>
+                     <p><b>1e CHEWING TOBACCO</b></p>
                      <div class="control-items--inline control-items">
-                        <label>
-                        <input type="checkbox" name="" value="">Never Used
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Used in the Past
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Currently Use
-                        </label>
+                        <label><input type="checkbox" name="chew_never" id="chew_never" value="Never Used">Never Used</label>
+                        <label><input type="checkbox" name="chew_past" id="chew_past" value="Used in the Past">Used in the Past</label>
+                        <label><input type="checkbox" name="chew_current" id="chew_current" value="Currently Use">Currently Use</label>
                      </div>
                   </div>
+                  <!-- Q2 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
                         <p>2. What <b>age</b> were you when you <b>first tried tobacco?</b></p>
-                        <input type="text" id="" name="" value="">
+                        <input type="text" id="first_try_age" name="first_try_age" value="">
                      </div>
                   </div>
+                  <!-- Q3 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
-                        <label>3. Age when you started using tobacco on a <b>regular basis? </b></label>
-                        <input type="text" id="" name="" value="">
+                        <label for="regular_use_age">3. Age when you started using tobacco on a <b>regular basis?</b></label>
+                        <input type="text" id="regular_use_age" name="regular_use_age" value="">
                      </div>
                   </div>
+                  <!-- Q4 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
-                        <label>4. How many cigarettes do you smoke each day?</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="daily_cigarettes">4. How many cigarettes do you smoke each day?</label>
+                        <input type="text" id="daily_cigarettes" name="daily_cigarettes" value="">
                      </div>
                   </div>
+                  <!-- Q5 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
-                        <label>5. How often do you use e-cigs/vape each day?</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="daily_vape">5. How often do you use e-cigs/vape each day?</label>
+                        <input type="text" id="daily_vape" name="daily_vape" value="">
                      </div>
                   </div>
+                  <!-- Q6 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
-                        <label>6.How many minutes after you wake up do you smoke your 1st cigarette (or use other
-                        tobacco products)?</label>
-                        <input type="text" id="" name="" value="">
+                        <label for="first_cigarette_time">6. How many minutes after you wake up do you smoke your 1st cigarette (or use other tobacco products)?</label>
+                        <input type="text" id="first_cigarette_time" name="first_cigarette_time" value="">
                      </div>
                   </div>
+                  <!-- Q7 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
-                        <label for="individual">7. you sometimes awaken at night to smoke or use other tobacco products?
-                        </label>
+                        <label for="night_smoke">7. Do you sometimes awaken at night to smoke or use other tobacco products?</label>
                         <label class="radio-label" for="tobaccoyes">
-                        <input id="tobaccoyes" type="radio" name="tobaccoproducts" value="Yes" required="required">
-                        Male
+                           <input id="tobaccoyes" type="radio" name="night_smoke" value="Yes" required="required">Yes
                         </label>
                         <label class="radio-label" for="tobaccono">
-                        <input id="tobaccono" type="radio" name="tobaccoproducts" value="No">
-                        Female
+                           <input id="tobaccono" type="radio" name="night_smoke" value="No">No
                         </label>
                      </div>
                   </div>
+                  <!-- Q8 -->
                   <div class="form-row-field">
-                     <label>8. Who smokes in your household? Please check all that apply:</label>
+                     <label for="household_smokers">8. Who smokes in your household? Please check all that apply:</label>
                      <div class="control-items--inline control-items">
-                        <label>
-                        <input type="checkbox" name="" value="">No One
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Parents
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Brothers/Sisters
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Significant Other
-                        </label>
-                        <label>
-                        <input type="checkbox" name="" value="">Roommates
-                        </label>
+                        <label><input type="checkbox" name="household_none" id="household_none" value="No One">No One</label>
+                        <label><input type="checkbox" name="household_parents" id="household_parents" value="Parents">Parents</label>
+                        <label><input type="checkbox" name="household_siblings" id="household_siblings" value="Brothers/Sisters">Brothers/Sisters</label>
+                        <label><input type="checkbox" name="household_partner" id="household_partner" value="Significant Other">Significant Other</label>
+                        <label><input type="checkbox" name="household_roommates" id="household_roommates" value="Roommates">Roommates</label>
                      </div>
                   </div>
+                  <!-- Q9 -->
                   <div class="form-row-field">
                      <div class="control-items--inline control-items">
-                        <p>9. Do you <b>smoke indoors</b> at home? </p>
+                        <p>9. Do you <b>smoke indoors</b> at home?</p>
                         <label class="radio-label" for="smokeindoorsyes">
-                        <input id="smokeindoorsyes" type="radio" name="smokeindoors" value="Yes" required="required">
-                        Male
+                           <input id="smokeindoorsyes" type="radio" name="smoke_indoors" value="Yes" required="required">Yes
                         </label>
                         <label class="radio-label" for="smokeindoorsno">
-                        <input id="smokeindoorsno" type="radio" name="smokeindoors" value="No">
-                        Female
+                           <input id="smokeindoorsno" type="radio" name="smoke_indoors" value="No">No
                         </label>
                      </div>
                   </div>
+                  <!-- Q10 -->
                   <div class="form-row-field">
                      <label>10. How important is it to you to stop tobacco use now? (Please check one box)</label>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="" value="">1</label>
-                        <label><input type="checkbox" name="" value="">2</label>
-                        <label><input type="checkbox" name="" value="">3</label>
-                        <label><input type="checkbox" name="" value="">4</label>
-                        <label><input type="checkbox" name="" value="">5</label>
-                        <label><input type="checkbox" name="" value="">6</label>
-                        <label><input type="checkbox" name="" value="">7</label>
-                        <label><input type="checkbox" name="" value="">8</label>
-                        <label><input type="checkbox" name="" value="">9</label>
-                        <label><input type="checkbox" name="" value="">10</label>
+                        <!-- Loop 1 to 10 -->
+                        <label><input type="checkbox" name="importance_1" value="1">1</label>
+                        <label><input type="checkbox" name="importance_2" value="2">2</label>
+                        <label><input type="checkbox" name="importance_3" value="3">3</label>
+                        <label><input type="checkbox" name="importance_4" value="4">4</label>
+                        <label><input type="checkbox" name="importance_5" value="5">5</label>
+                        <label><input type="checkbox" name="importance_6" value="6">6</label>
+                        <label><input type="checkbox" name="importance_7" value="7">7</label>
+                        <label><input type="checkbox" name="importance_8" value="8">8</label>
+                        <label><input type="checkbox" name="importance_9" value="9">9</label>
+                        <label><input type="checkbox" name="importance_10" value="10">10</label>
                      </div>
                   </div>
+                  <!-- Q11 -->
                   <div class="form-row-field">
                      <p><b>Tobacco-Related Illness</b></p>
-                     <label>11. Have you in the past or do you now have any of the following? (Check all that
-                     apply)</label>
+                     <label>11. Have you in the past or do you now have any of the following? (Check all that apply)</label>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="" value="">Arrthymia/Irregular Heart Beat</label>
-                        <label><input type="checkbox" name="" value="">Emphysema </label>
-                        <label><input type="checkbox" name="" value="">Obesity/Overweight</label>
-                        <label><input type="checkbox" name="" value="">Asthma or Chronic Bronchitis</label>
-                        <label><input type="checkbox" name="" value="">Halitosis/Bad Breath</label>
-                        <label><input type="checkbox" name="" value="">Peptic Ulcer</label>
-                        <label><input type="checkbox" name="" value="">Cancer (List Type Below) </label>
-                        <label><input type="checkbox" name="" value="">Heart Attack/Disease</label>
-                        <label><input type="checkbox" name="" value="">Pneumonia</label>
-                        <label><input type="checkbox" name="" value="">Circulatory Problems</label>
-                        <label><input type="checkbox" name="" value="">Impotence</label>
-                        <label><input type="checkbox" name="" value="">Seizures</label>
-                        <label><input type="checkbox" name="" value="">Diabetes</label>
-                        <label><input type="checkbox" name="" value="">Infertility</label>
-                        <label><input type="checkbox" name="" value="">Stroke</label>
-                        <label><input type="checkbox" name="" value="">Early Menopause </label>
-                        <label><input type="checkbox" name="" value="">Influenza/Frequent Flu</label>
-                        <label><input type="checkbox" name="" value="">Wrinkles</label>
+                        <label><input type="checkbox" name="illness_arrhythmia" value="Arrhythmia">Arrhythmia/Irregular Heart Beat</label>
+                        <label><input type="checkbox" name="illness_emphysema" value="Emphysema">Emphysema</label>
+                        <label><input type="checkbox" name="illness_obesity" value="Obesity">Obesity/Overweight</label>
+                        <label><input type="checkbox" name="illness_asthma" value="Asthma">Asthma or Chronic Bronchitis</label>
+                        <label><input type="checkbox" name="illness_halitosis" value="Halitosis">Halitosis/Bad Breath</label>
+                        <label><input type="checkbox" name="illness_ulcer" value="Peptic Ulcer">Peptic Ulcer</label>
+                        <label><input type="checkbox" name="illness_cancer" value="Cancer">Cancer</label>
+                        <label><input type="checkbox" name="illness_heart" value="Heart Disease">Heart Attack/Disease</label>
+                        <label><input type="checkbox" name="illness_pneumonia" value="Pneumonia">Pneumonia</label>
+                        <label><input type="checkbox" name="illness_circulation" value="Circulatory">Circulatory Problems</label>
+                        <label><input type="checkbox" name="illness_impotence" value="Impotence">Impotence</label>
+                        <label><input type="checkbox" name="illness_seizures" value="Seizures">Seizures</label>
+                        <label><input type="checkbox" name="illness_diabetes" value="Diabetes">Diabetes</label>
+                        <label><input type="checkbox" name="illness_infertility" value="Infertility">Infertility</label>
+                        <label><input type="checkbox" name="illness_stroke" value="Stroke">Stroke</label>
+                        <label><input type="checkbox" name="illness_menopause" value="Menopause">Early Menopause</label>
+                        <label><input type="checkbox" name="illness_flu" value="Flu">Influenza/Frequent Flu</label>
+                        <label><input type="checkbox" name="illness_wrinkles" value="Wrinkles">Wrinkles</label>
                      </div>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="" value="">Other illness (describe):</label>
-                        <textarea id="" name="" cols="170" rows="3"></textarea>
+                        <label><input type="checkbox" name="illness_other" value="Other">Other illness (describe):</label>
+                        <textarea id="illness_other_desc" name="illness_other_desc" cols="170" rows="3"></textarea>
                      </div>
                   </div>
+                  <!-- Q12 -->
                   <div class="form-row-field">
                      <p><b>Desire to Quit</b></p>
-                     <p>12. Please check the number next to the one statement that best
-                        describes your current situation:
+                     <p>
+                       12. Please check the number next to the one statement that best describes your current situation:
                      </p>
                      <div class="control-items--inline control-items items-start">
-                        <label>12a
-                        <input type="checkbox" name="" value="">I currently smoke/use tobacco and I do not want to
-                        quit in the
-                        next 6 months.
-                        </label>
-                        <label>12b
-                        <input type="checkbox" name="" value="">I currently smoke/use tobacco and I do not want to
-                        quit in the
-                        next 6 months.I am seriously considering quitting in the next 6 months, but
-                        not in the next 30 days
-                        </label>
-                        <label>12c
-                        <input type="checkbox" name="" value="">I am interested in drastically reducing the number of
-                        cigarettes I currently smoke (reduce by half or more), but am
-                        not interested in quitting totally.
-                        </label>
-                        <label>12d
-                        <input type="checkbox" name="" value="">I am interested in quitting smoking/tobacco use in
-                        the next
-                        month, and I would be interested in any assistance I could
-                        get
-                        </label>
+                       <label>
+                         12a
+                         <input type="checkbox" name="quit_12a" value="12a">
+                         I currently smoke/use tobacco and I do not want to quit in the next 6 months.
+                       </label>
+                       <label>
+                         12b
+                         <input type="checkbox" name="quit_12b" value="12b">
+                         I currently smoke/use tobacco and I am seriously considering quitting in the next 6 months, but not in the next 30 days.
+                       </label>
+                       <label>
+                         12c
+                         <input type="checkbox" name="quit_12c" value="12c">
+                         I want to reduce smoking but not quit totally.
+                       </label>
+                       <label>
+                         12d
+                         <input type="checkbox" name="quit_12d" value="12d">
+                         I want to quit within the next month and want assistance.
+                       </label>
                      </div>
-                  </div>
+                   </div>
+                   
+                  <!-- Q13 -->
                   <div class="form-row-field">
-                     <label>13. How confident are you that you will succeed in stopping your tobacco use now? (Please
-                     check one box)</label>
+                     <label>13. How confident are you that you will succeed in stopping your tobacco use now? (Please check one box)</label>
                      <div class="control-items--inline control-items">
-                        <label><input type="checkbox" name="" value="">1</label>
-                        <label><input type="checkbox" name="" value="">2</label>
-                        <label><input type="checkbox" name="" value="">3</label>
-                        <label><input type="checkbox" name="" value="">4</label>
-                        <label><input type="checkbox" name="" value="">5</label>
-                        <label><input type="checkbox" name="" value="">6</label>
-                        <label><input type="checkbox" name="" value="">7</label>
-                        <label><input type="checkbox" name="" value="">8</label>
-                        <label><input type="checkbox" name="" value="">9</label>
-                        <label><input type="checkbox" name="" value="">10</label>
+                        <label><input type="checkbox" name="confidence_1" value="1">1</label>
+                        <label><input type="checkbox" name="confidence_2" value="2">2</label>
+                        <label><input type="checkbox" name="confidence_3" value="3">3</label>
+                        <label><input type="checkbox" name="confidence_4" value="4">4</label>
+                        <label><input type="checkbox" name="confidence_5" value="5">5</label>
+                        <label><input type="checkbox" name="confidence_6" value="6">6</label>
+                        <label><input type="checkbox" name="confidence_7" value="7">7</label>
+                        <label><input type="checkbox" name="confidence_8" value="8">8</label>
+                        <label><input type="checkbox" name="confidence_9" value="9">9</label>
+                        <label><input type="checkbox" name="confidence_10" value="10">10</label>
                      </div>
                   </div>
                </div>
             </div>
             <div class="panel-footer">
-               <p>From the Learning about Healthy Living, Tobacco and You Manual. Edited and Revised February
-                  2012. Appendix A. Rutgers, Robert Wood Johnson Medical School, Division of Addiction Psychiatry.
-               </p>
+               <p>From the Learning about Healthy Living, Tobacco and You Manual. Edited and Revised February 2012. Appendix A. Rutgers, Robert Wood Johnson Medical School, Division of Addiction Psychiatry.</p>
             </div>
          </section>
+         
          <!-- Rapid Opioid Dependence Screen (RODS)  -->
          <section class="panel--frontend-form panel">
             <div class="fieldset">
@@ -1737,125 +1464,125 @@
                <p>Created by Sandra A. Springer, MD</p>
                <div class="form-row--2up form-row">
                   <div class="form-row-field">
-                     <label for="">Guest’s Name</label>
-                     <input type="text" id="" name="" value="">
+                     <label for="">Guest's Name</label>
+                     <input type="text" id="rods_guests_name" name="rods_guests_name" value="">
                   </div>
                </div>
-               <p><b>Instructions: [Interviewer reads] The following questions are about your prior use of drugs. For
-                  each question, please indicate “yes” or “no” as it applies to your drug use during the last 12
-                  months.</b> 
-               </p>
+               <p>
+                  <b>
+                    Instructions: [Interviewer reads] The following questions are about your prior use of drugs. For each question, please indicate “yes” or “no” as it applies to your drug use during the last 12 months.
+                  </b>
+                </p>
+                
                <div class="form-row--full form-row">
                   <div class="form-row-field">
                      <label for="">1. Have you ever taken any of the following drugs?</label>
                      <div class="subfield-group">
                         <p>If any drug in <b>question 1</b> is coded <b>“yes”</b>, proceed to questions <b>2-8</b>.</p>
-                        <p>If all drugs in <b>question 1</b> are <b>“no”</b>, skip to end and code <b>“no”</b> for
-                           opioid dependent.
-                        </p>
+                        <p>If all drugs in <b>question 1</b> are <b>“no”</b>, skip to end and code <b>“no”</b> for opioid dependent.</p>
                         <div class="control-items--inline control-items">
                            <label for="individual">a. Heroin</label>
                            <label class="radio-label" for="heroinyes">
-                           <input id="heroinyes" type="radio" name="drugsheroin" value="Yea" required="required">
-                           Yes
+                              <input id="heroinyes" type="radio" name="drugsheroin" value="Yea" required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="heroinno">
-                           <input id="heroinno" type="radio" name="drugsheroin" value="No">
-                           No
+                              <input id="heroinno" type="radio" name="drugsheroin" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">b. Methadone</label>
                            <label class="radio-label" for="methadoneyes">
-                           <input id="methadoneyes" type="radio" name="methadone" value="Yea" required="required">
-                           Yes
+                              <input id="methadoneyes" type="radio" name="methadone" value="Yea" required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="methadoneno">
-                           <input id="methadoneno" type="radio" name="methadone" value="No">
-                           No
+                              <input id="methadoneno" type="radio" name="methadone" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">c. Morphine</label>
                            <label class="radio-label" for="morphineyes">
-                           <input id="morphineyes" type="radio" name="morphine" value="Yea" required="required">
-                           Yes
+                              <input id="morphineyes" type="radio" name="morphine" value="Yea" required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="morphineno">
-                           <input id="morphineno" type="radio" name="morphine" value="No">
-                           No
+                              <input id="morphineno" type="radio" name="morphine" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">d. Buprenorphine</label>
                            <label class="radio-label" for="buprenorphineyes">
-                           <input id="buprenorphineyes" type="radio" name="buprenorphine" value="Yea"
-                              required="required">
-                           Yes
+                              <input id="buprenorphineyes" type="radio" name="buprenorphine" value="Yea"
+                                 required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="buprenorphineno">
-                           <input id="buprenorphineno" type="radio" name="buprenorphine" value="No">
-                           No
+                              <input id="buprenorphineno" type="radio" name="buprenorphine" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">e. MS CONTIN </label>
                            <label class="radio-label" for="mscontinyes">
-                           <input id="mscontinyes" type="radio" name="mscontin" value="Yea" required="required">
-                           Yes
+                              <input id="mscontinyes" type="radio" name="mscontin" value="Yea" required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="mscontinno">
-                           <input id="mscontinno" type="radio" name="mscontin" value="No">
-                           No
+                              <input id="mscontinno" type="radio" name="mscontin" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">e. Oxycontin </label>
                            <label class="radio-label" for="oxycontinyes">
-                           <input id="oxycontinyes" type="radio" name="oxycontin" value="Yea" required="required">
-                           Yes
+                              <input id="oxycontinyes" type="radio" name="oxycontin" value="Yea" required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="oxycontinno">
-                           <input id="oxycontinno" type="radio" name="oxycontin" value="No">
-                           No
+                              <input id="oxycontinno" type="radio" name="oxycontin" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">f. oxycodone </label>
                            <label class="radio-label" for="oxycodoneyes">
-                           <input id="oxycodoneyes" type="radio" name="oxycodone" value="Yea" required="required">
-                           Yes
+                              <input id="oxycodoneyes" type="radio" name="oxycodone" value="Yea" required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="oxycodoneno">
-                           <input id="oxycodoneno" type="radio" name="oxycodone" value="No">
-                           No
+                              <input id="oxycodoneno" type="radio" name="oxycodone" value="No">
+                              No
                            </label>
                         </div>
                         <div class="control-items--inline control-items">
                            <label for="individual">h. Other opioid analgesics (e.g., Vicodin, Darvocet, etc.)</label>
                            <label class="radio-label" for="opioidanalgesicsyes">
-                           <input id="opioidanalgesicsyes" type="radio" name="opioidanalgesics" value="Yea"
-                              required="required">
-                           Yes
+                              <input id="opioidanalgesicsyes" type="radio" name="opioidanalgesics" value="Yea"
+                                 required="required">
+                              Yes
                            </label>
                            <label class="radio-label" for="opioidanalgesicsno">
-                           <input id="opioidanalgesicsno" type="radio" name="opioidanalgesics" value="No">
-                           No
+                              <input id="opioidanalgesicsno" type="radio" name="opioidanalgesics" value="No">
+                              No
                            </label>
                         </div>
                      </div>
                   </div>
                   <div class="form-row-field">
                      <label>2. Did you ever need to use more opioids to get the same high as when you first started
-                     using opioids?</label>
+                        using opioids?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="opioidsyes">
-                        <input id="opioidsyes" type="radio" name="opioids" value="Yea" required="required">
-                        Yes
+                           <input id="opioidsyes" type="radio" name="opioids" value="Yea" required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="opioidsno">
-                        <input id="opioidsno" type="radio" name="opioids" value="No">
-                        No
+                           <input id="opioidsno" type="radio" name="opioids" value="No">
+                           No
                         </label>
                      </div>
                   </div>
@@ -1863,27 +1590,26 @@
                      <label>3. Did the idea of missing a fix (or dose) ever make you anxious or worried?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="anxiousworriedyes">
-                        <input id="anxiousworriedyes" type="radio" name="anxiousworried" value="Yea"
-                           required="required">
-                        Yes
+                           <input id="anxiousworriedyes" type="radio" name="anxiousworried" value="Yea"
+                              required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="anxiousworriedno">
-                        <input id="anxiousworriedno" type="radio" name="anxiousworried" value="No">
-                        No
+                           <input id="anxiousworriedno" type="radio" name="anxiousworried" value="No">
+                           No
                         </label>
                      </div>
                   </div>
                   <div class="form-row-field">
-                     <label>4. In the morning, did you ever use opioids to keep from feeling “dope sick” or did you ever
-                     feel “dope sick”?</label>
+                     <label>4. In the morning, did you ever use opioids to keep from feeling “dope sick” or did you ever feel “dope sick”?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="dopesickdyes">
-                        <input id="dopesickdyes" type="radio" name="dopesick" value="Yea" required="required">
-                        Yes
+                           <input id="dopesickdyes" type="radio" name="dopesick" value="Yea" required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="dopesickdno">
-                        <input id="dopesickdno" type="radio" name="dopesickd" value="No">
-                        No
+                           <input id="dopesickdno" type="radio" name="dopesickd" value="No">
+                           No
                         </label>
                      </div>
                   </div>
@@ -1891,12 +1617,12 @@
                      <label>5. Did you worry about your use of opioids?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="useofopioidsyes">
-                        <input id="useofopioidsyes" type="radio" name="useofopioids" value="Yea" required="required">
-                        Yes
+                           <input id="useofopioidsyes" type="radio" name="useofopioids" value="Yea" required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="useofopioidsno">
-                        <input id="useofopioidsno" type="radio" name="useofopioids" value="No">
-                        No
+                           <input id="useofopioidsno" type="radio" name="useofopioids" value="No">
+                           No
                         </label>
                      </div>
                   </div>
@@ -1904,67 +1630,64 @@
                      <label>6. Did you find it difficult to stop or not use opioids?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="notuseopioidsyes">
-                        <input id="notuseopioidsyes" type="radio" name="notuseopioids" value="Yea"
-                           required="required">
-                        Yes
+                           <input id="notuseopioidsyes" type="radio" name="notuseopioids" value="Yea"
+                              required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="notuseopioidsno">
-                        <input id="notuseopioidsno" type="radio" name="notuseopioids" value="No">
-                        No
+                           <input id="notuseopioidsno" type="radio" name="notuseopioids" value="No">
+                           No
                         </label>
                      </div>
                   </div>
                   <div class="form-row-field">
-                     <label>7. Did you ever need to spend a lot of time/energy on finding opioids or recovering from
-                     feeling high?</label>
+                     <label>7. Did you ever need to spend a lot of time/energy on finding opioids or recovering from feeling high?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="feelinghighyes">
-                        <input id="feelinghighyes" type="radio" name="feelinghigh" value="Yea" required="required">
-                        Yes
+                           <input id="feelinghighyes" type="radio" name="feelinghigh" value="Yea" required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="feelinghighno">
-                        <input id="feelinghighno" type="radio" name="feelinghigh" value="No">
-                        No
+                           <input id="feelinghighno" type="radio" name="feelinghigh" value="No">
+                           No
                         </label>
                      </div>
                   </div>
                   <div class="form-row-field">
-                     <label>8. Did you ever miss important things like doctor’s appointments, family/friend activities,
-                     or other things because of opioids?</label>
+                     <label>8. Did you ever miss important things like doctor's appointments, family/friend activities, or other things because of opioids?</label>
                      <div class="control-items--inline control-items">
                         <label class="radio-label" for="becauseofopioidsyes">
-                        <input id="becauseofopioidsyes" type="radio" name="becauseofopioids" value="Yea"
-                           required="required">
-                        Yes
+                           <input id="becauseofopioidsyes" type="radio" name="becauseofopioids" value="Yea"
+                              required="required">
+                           Yes
                         </label>
                         <label class="radio-label" for="becauseofopioidsno">
-                        <input id="becauseofopioidsno" type="radio" name="becauseofopioids" value="No">
-                        No
+                           <input id="becauseofopioidsno" type="radio" name="becauseofopioids" value="No">
+                           No
                         </label>
                      </div>
                   </div>
                </div>
                <div class="form-row--full form-row">
                   <div class="form-row-field">
-                     <p>Scoring Instructions: Add number of “yes” responses for questions 2-8. If total is > 3, code
-                        “yes” for opioid dependent. If total is < 2, code “no” for opioid dependent.
-                     </p>
-                     <div class="control-items--inline control-items">
-                        <label for=""><b>Opioid Dependent:</b></label>
-                        <label class="radio-label" for="opioiddependenyes">
-                        <input id="opioiddependenyes" type="radio" name="opioiddependen" value="Yea"
-                           required="required">
-                        Yes
-                        </label>
-                        <label class="radio-label" for="opioiddependenno">
-                        <input id="opioiddependenno" type="radio" name="opioiddependen" value="No">
-                        No
-                        </label>
-                     </div>
+                     <p>Scoring Instructions: Add number of “yes” responses for questions 2-8. If total is > 3, code “yes” for opioid dependent. If total is < 2, code “no” for opioid dependent. </p>
+                           <div class="control-items--inline control-items">
+                              <label for=""><b>Opioid Dependent:</b></label>
+                              <label class="radio-label" for="opioiddependenyes">
+                                 <input id="opioiddependenyes" type="radio" name="opioiddependen" value="Yea"
+                                    required="required">
+                                 Yes
+                              </label>
+                              <label class="radio-label" for="opioiddependenno">
+                                 <input id="opioiddependenno" type="radio" name="opioiddependen" value="No">
+                                 No
+                              </label>
+                           </div>
                   </div>
                </div>
             </div>
          </section>
-      </main>
-   </body>
+   </main>
+</body>
+
 </html>
